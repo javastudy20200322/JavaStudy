@@ -17,7 +17,7 @@ import java.util.Scanner;
  * 사용자가 입력한 값이 변환될 수 있는 타입을 알려주는 프로그램.
  * </pre>
  */
-public class Casting
+public class Casting_seungha_200329
 {
 	// 사용자에게 값을 입력받기 위한 Scanner 객체.
 	public static Scanner scanner = new Scanner(System.in);
