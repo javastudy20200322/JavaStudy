@@ -87,7 +87,16 @@ public class Casting_seungha_200329
 	 */
 	public static String castToChar()
 	{
-		return "값을 입력 받고, 그 값이 문자형(char) 타입으로 변환이 가능 여부를 출력하는 코드를 작성하세요.";
+		try {
+				System.out.print("값을 입력해주세요 > ");
+				String input = scanner.next();
+				if (input.length() == 1) return "char";
+				Long inputToLong = Long.parseLong(input);
+				if (inputToLong>=0 && inputToLong<Math.pow(2, 16)) return "char";
+			} catch(Exception e) {
+				return "";
+			}
+			return "";
 	}
 	
 	
@@ -112,7 +121,28 @@ public class Casting_seungha_200329
 	 */
 	public static String castToInteger()
 	{
-		return "값을 입력 받고, 그 값이 정수형(byte, short, int, long, char) 중 어떤 타입으로 변환이 가능한지를 출력하는 코드를 작성하세요.";
+		try {
+				System.out.print("값을 입력해주세요 > ");
+				Long input = scanner.nextLong();
+				if (input>=-Math.pow(2, 63) && input<Math.pow(2, 63)) {
+					if (input>=-Math.pow(2, 31) && input<Math.pow(2, 31)) {
+						if (input>=-Math.pow(2, 15) && input<Math.pow(2, 15)) {
+							if (input>=-Math.pow(2, 7) && input<Math.pow(2, 7)) {
+								System.out.println("byte");
+							}
+							System.out.println("short");
+						}
+						if (input>=0 && input<Math.pow(2, 16)) {
+							System.out.println("char");
+						}
+						System.out.println("int");
+					}
+					System.out.println("long");
+				}
+			} catch(Exception e) {
+				return "";
+			}
+			return "";
 	}
 	
 	
@@ -134,7 +164,19 @@ public class Casting_seungha_200329
 	 */
 	public static String castToRealNumber()
 	{
-		return "값을 입력 받고, 그 값이 실수형(float, double) 중 어떤 타입으로 변환이 가능한지를 출력하는 코드를 작성하세요.";
+		try {
+				System.out.print("값을 입력해주세요 > ");
+				Double input = scanner.nextDouble();
+				if (input>=-1.7e308 && input<=-4.9e-324 || input>=4.9e-324 && input<=1.7e308) {
+					if (input>=-3.4e38 && input<=-1.4e-45 || input>=1.4e-45 && input<=3.4e38) {
+						System.out.println("float");
+					}
+					System.out.println("double");
+				}
+			} catch(Exception e) {
+				return "";
+			}
+			return "";
 	}
 	
 	
@@ -155,6 +197,13 @@ public class Casting_seungha_200329
 	 */
 	public static String castToBoolean()
 	{
-		return "값을 입력 받고, 그 값이 논리형(boolean) 타입으로 변환이 가능 여부를 출력하는 코드를 작성하세요.";
+		try {
+				System.out.print("값을 입력해주세요 > ");
+				String input = scanner.next();
+				if (input.equals("true") || input.equals("false")) return "boolean";
+			} catch(Exception e) {
+				return "";
+			}
+			return "";
 	}
 }
