@@ -1,4 +1,4 @@
-package summary.haesung.chapter02;
+package summary.haesung.practice.chapter02;
 
 public class ChapterVariable
 {
