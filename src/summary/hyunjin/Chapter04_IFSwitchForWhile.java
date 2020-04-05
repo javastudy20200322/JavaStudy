@@ -33,7 +33,7 @@ public class Chapter04_IFSwitchForWhile {
 
 //		Exercise4_14();
 //				
-		Exercise4_15();
+//		Exercise4_15();
 	}
 
 	public static void Exercise4_1() {	
@@ -144,7 +144,7 @@ public class Chapter04_IFSwitchForWhile {
 	}
 	
 	public static void Exercise4_9() {//답지에 -0해라는데 왜 그런지 잘 모르겟다.
-		String str = "12345";
+		String str = "12345";//일반 십진수 더하는것 처럼 '0'의 유니코드값에다가'1'을 더하면 '1'의 유니코드값이 된다.??
 		int sum = 0;
 	
 		for(int i=0; i<str.length(); i++) {
@@ -187,7 +187,6 @@ public class Chapter04_IFSwitchForWhile {
 		
 		for(int i=2;i<10;i=i+3) {
 			for(int j=1;j<4;j++) {
-				int x = 0;
 				System.out.println(i + "*" + j + "=" + i*j +"\t" + (i+1) + "*" + j + "=" + (i+1)*j + "\t" 
 				+ (i+2 > 9 ? "" : i+2 + "*") + ( i+2 > 9 ?  "" : j + "=" )  + ( i+2 > 9 ? "" :  (i+2)*j));
 				
@@ -260,10 +259,5 @@ public class Chapter04_IFSwitchForWhile {
 		else
 			System.out.println(number + "는 회문수가 아닙니다.");
 	}
-	
-	
-	
-	
-	
 	
 }
