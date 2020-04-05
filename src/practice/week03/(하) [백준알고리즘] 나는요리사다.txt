@@ -22,7 +22,7 @@ https://www.acmicpc.net/problem/2953
 [예제 출력 1]
 4 19
 
-출처
+[출처]
 Contest > Croatian Open Competition in Informatics > COCI 2008/2009 > Contest #3 1번
 
 문제를 번역한 사람: baekjoon
