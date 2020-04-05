@@ -1,3 +1,5 @@
+package summary.seungha.Ch02.Basic;
+
 class OverflowEx {
 	public static void main(String[] args) {
 		short sMin = -32768;

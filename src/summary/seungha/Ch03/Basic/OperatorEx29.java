@@ -1,3 +1,5 @@
+package summary.seungha.Ch03.Basic;
+
 class OperatorEx29 {
 	public static void main(String[] args) {
 		byte p =  10;

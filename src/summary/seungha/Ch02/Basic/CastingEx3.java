@@ -1,3 +1,5 @@
+package summary.seungha.Ch02.Basic;
+
 class CastingEx3 {
 	public static void main(String[] args) {
 		float 	f	= 9.1234567f;

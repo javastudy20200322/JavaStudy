@@ -1,3 +1,5 @@
+package summary.seungha.Ch02.Basic;
+
 class FloatToBinEx {
 	public static void main(String args[]) {
 		float f = 9.1234567f;

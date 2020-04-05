@@ -1,3 +1,5 @@
+package summary.seungha.Ch02.Basic;
+
 class SpecialCharEx {
 	public static void main(String[] args) {
 		System.out.println('\'');

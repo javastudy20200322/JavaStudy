@@ -1,3 +1,5 @@
+package summary.seungha.Ch04.Basic;
+
 class FlowEx21 {
 	public static void main(String[] args) {
 		for (int i=1; i<=5; i++) {

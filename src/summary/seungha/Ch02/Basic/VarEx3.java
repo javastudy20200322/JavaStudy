@@ -1,3 +1,5 @@
+package summary.seungha.Ch02.Basic;
+
 class VarEx3 {
 	int i;	
 	public static void main(String[] args) {

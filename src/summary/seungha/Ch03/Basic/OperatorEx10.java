@@ -1,3 +1,5 @@
+package summary.seungha.Ch03.Basic;
+
 class OperatorEx10 {
 	public static void main(String args[]) {
 		int a = 1000000;

@@ -1,3 +1,5 @@
+package summary.seungha.Ch02.Basic;
+
 class VarEx1 {
 	public static void main(String[] args) {
 		int year	= 0;

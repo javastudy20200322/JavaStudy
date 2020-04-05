@@ -1,3 +1,5 @@
+package summary.seungha.Ch02.Basic;
+
 class VarEx2 {
 	public static void main(String[] args) {
 		int x = 10, y = 20;

@@ -1,3 +1,5 @@
+package summary.seungha.Ch03.Basic;
+
 class OperatorEx31 {
 	public static void main(String[] args) {
 		int dec		= 1234;

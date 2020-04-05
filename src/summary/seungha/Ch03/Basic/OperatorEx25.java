@@ -1,4 +1,6 @@
- import java.util.*;
+package summary.seungha.Ch03.Basic;
+
+import java.util.*;
  
  class OperatorEx25 {
 	public static void main(String args[]) {
