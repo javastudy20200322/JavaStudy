@@ -1,3 +1,5 @@
+package summary.seungha.Ch02.Basic;
+
 import java.util.*;		// Scanner를 사용하기 위해 추가
 
 class ScannerEx {

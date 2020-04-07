@@ -1,3 +1,5 @@
+package summary.seungha.Ch02.Basic;
+
 class CastingEx2 {
 	public static void main(String[] args) {
 		int		i = 10;

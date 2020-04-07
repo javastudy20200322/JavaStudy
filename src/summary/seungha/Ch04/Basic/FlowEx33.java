@@ -1,3 +1,5 @@
+package summary.seungha.Ch04.Basic;
+
 class FlowEx33 {
 	public static void main(String[] args) {
 		// for문에 Loop1이라는 이름을 붙임

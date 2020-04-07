@@ -1,3 +1,5 @@
+package summary.seungha.Ch04.Basic;
+
 import java.util.*;	// Scanner 클래스를 사용하기 위해 추가
 
 class FlowEx3 {

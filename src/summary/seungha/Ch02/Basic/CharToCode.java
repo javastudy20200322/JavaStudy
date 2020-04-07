@@ -1,3 +1,5 @@
+package summary.seungha.Ch02.Basic;
+
 class CharToCode {
 	public static void main(String[] args) {
 		char ch = 'A';		// char ch = 65;

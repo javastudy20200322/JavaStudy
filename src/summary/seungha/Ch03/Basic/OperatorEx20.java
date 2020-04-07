@@ -1,3 +1,5 @@
+package summary.seungha.Ch03.Basic;
+
 class OperatorEx20 {
 	public static void main(String[] args) {
 		System.out.println(-10%8);

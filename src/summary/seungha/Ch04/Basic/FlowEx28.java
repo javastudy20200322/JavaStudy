@@ -1,3 +1,5 @@
+package summary.seungha.Ch04.Basic;
+
 import java.util.*;
 
 class FlowEx28 {

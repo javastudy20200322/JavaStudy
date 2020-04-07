@@ -1,3 +1,5 @@
+package summary.seungha.Ch02.Basic;
+
 class FloatEx1 {
 	public static void main(String[] args) {
 		float	f1	= 9.12345678901234567890f;

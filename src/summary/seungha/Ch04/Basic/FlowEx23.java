@@ -1,3 +1,5 @@
+package summary.seungha.Ch04.Basic;
+
 class FlowEx23 {
 	public static void main(String[] args) {
 		int i = 5;

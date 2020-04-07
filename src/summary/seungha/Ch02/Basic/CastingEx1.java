@@ -1,3 +1,5 @@
+package summary.seungha.Ch02.Basic;
+
 class CastingEx1 {
 	public static void main(String[] args) {
 		double d = 85.4;

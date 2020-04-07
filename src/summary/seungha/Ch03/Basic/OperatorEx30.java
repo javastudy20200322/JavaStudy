@@ -1,3 +1,5 @@
+package summary.seungha.Ch03.Basic;
+
 class OperatorEx30 {
 	// 10진 정수를 2진수로 변환하는 메서드
 	static String toBinaryString(int x) {

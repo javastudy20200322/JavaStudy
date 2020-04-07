@@ -1,3 +1,5 @@
+package summary.seungha.Ch02.Basic;
+
 class StringEx {
 	public static void main(String[] args) {
 		String name = "Ja" + "va";
