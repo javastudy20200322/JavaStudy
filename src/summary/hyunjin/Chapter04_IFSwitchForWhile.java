@@ -9,7 +9,7 @@ public class Chapter04_IFSwitchForWhile {
 //		
 //		Exercise4_2();
 //		
-//		Exercise4_3();
+		Exercise4_3();
 //
 //		Exercise3_4();
 
@@ -33,7 +33,7 @@ public class Chapter04_IFSwitchForWhile {
 
 //		Exercise4_14();
 //				
-		Exercise4_15();
+//		Exercise4_15();
 	}
 
 	public static void Exercise4_1() {	
