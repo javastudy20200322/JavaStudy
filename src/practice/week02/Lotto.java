@@ -30,7 +30,7 @@ public class Lotto
 	public static void main(String[] args)
 	{
 		// 배열을 사용하지 않고 Lotto 당첨번호 추첨 프로그램을 구현하세요.
-		
+		num1 = (int) (Math.random() * 45 + 1);
 		
 		
 		System.out.println("Lotto 당첨 번호는..");
