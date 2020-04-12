@@ -1,5 +1,6 @@
 package summary.haesung.practice.chapter05;
 
+import java.util.Arrays;
 import java.util.Scanner;
 
 /**
@@ -27,8 +28,8 @@ public class ChapterArray
 //		Example8();
 //		Example9();
 //		Example10();
-//		Example11();
-		Example12();
+		Example11();
+//		Example12();
 //		Example13();
 	}
 
@@ -39,9 +40,10 @@ public class ChapterArray
 		// int[] arr[];
 		// int[] arr = {1, 2, 3,};
 		// int[] arr = new int[5];
-		// int[] arr = new int[5]{1,2,3,4,5};	// 배열의 선언과 동시에 배열의 값을 초기화할 때는 배열의 길이를 지정하지 않는다.
-		// int arr[5];							// 배열의 타입이나 변수명에서 길이를 지정할 수 없다.
-		// int[] arr[] = new int[3][];
+//		 int[] arr = new int[5]{1,2,3,4,5};		// 배열의 선언과 동시에 배열의 값을 초기화할 때는 배열의 길이를 지정하지 않는다.
+//		 int arr[5];							// 배열의 타입이나 변수명에서 길이를 지정할 수 없다.
+//		 int[] arr[] = new int[3][];
+//		 System.out.println(Arrays.deepToString(arr));
 	}
 	
 	public static void Example2()
@@ -360,9 +362,9 @@ public class ChapterArray
 			{
 				int index = (int)(Math.random() * question.length);
 				
-				char temp = question[index];
+				char temp 		= question[index];
 				question[index] = question[j];
-				question[j] = temp;
+				question[j] 	= temp;
 			}
 
 			System.out.printf("Q%d. %s의 정답을 입력하세요.>", i+1, new String(question));
