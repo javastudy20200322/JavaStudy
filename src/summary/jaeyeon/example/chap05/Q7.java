@@ -3,7 +3,7 @@ package summary.jaeyeon.example.chap05;
 public class Q7 {
 
 	public static void main(String[] args) {
-
+		//다시풀어보기
 		if (args.length != 1) {
 			System.out.println("USAGE : java Q7 3120");
 			System.exit(0);
@@ -14,8 +14,8 @@ public class Q7 {
 
 		System.out.println("money = " + money);
 
-		int[] coinUnit = { 500, 100, 50, 10 };//동전의 단위
-		int [] coin = {5,5,5,5};//단위별 동전의 갯수
+		int[] coinUnit = { 500, 100, 50, 10 };// 동전의 단위
+		int[] coin = { 5, 5, 5, 5 };// 단위별 동전의 갯수
 		// int money = 3710;
 		int five_hundred = 0;
 		int one_hundred = 0;
@@ -27,11 +27,9 @@ public class Q7 {
 		for (int i = 0; i < coinUnit.length; i++) {
 			int coinNum = 0;
 			/**
-			 * 아래의 로직에 맞게 코드를 작성하시오
-			 * 1. 금액(money) 을 동전단위로 나눠서 필요한 동전의 갯수(coinNum)를 구한다.
-			 * 2. 배열 coin 에서 coinNum 만큼의 동전을 뺀다.
-			 * (만일 충분한 동전이 없다면 배열 coin 에 있는 만큼만 뺀다.
-			 * 3. 금액에서 동전의 갯수(coinNum)와 동전단위를 곱한 값을 뺀다.
+			 * 아래의 로직에 맞게 코드를 작성하시오 1. 금액(money) 을 동전단위로 나눠서 필요한 동전의 갯수(coinNum)를 구한다. 2. 배열
+			 * coin 에서 coinNum 만큼의 동전을 뺀다. (만일 충분한 동전이 없다면 배열 coin 에 있는 만큼만 뺀다. 3. 금액에서 동전의
+			 * 갯수(coinNum)와 동전단위를 곱한 값을 뺀다.
 			 */
 			// System.out.println(coinUnit[i]);
 			if (coinUnit[i] == 500) {
