@@ -46,7 +46,7 @@ class Ch05_Exercise {
 		System.out.println("b. int[] arr = {1,2,3,};");				// O, 뒤의 콤마는 무시됨
 		System.out.println("c. int[] arr = new int[5];");			// O
 		System.out.println("d. int[] arr = new int[5]{1,2,3,4,5};");// X, 초기화를 동시에 할 땐 배열의 길이를 지정하지 않음
-		System.out.println("e. int arr[5];");						// O, 선언만 한 것
+		System.out.println("e. int arr[5];");						// (틀림, 주의) X, 선언할 때에는 배열의 길이를 넣지 않음
 		System.out.println("f. int[] arr[] = new int[3][];");		// O, 가변배열 : 마지막 차수의 길이를 지정하지 않음
 	}
 	
@@ -148,7 +148,8 @@ class Ch05_Exercise {
 		
 		for (int i=0; i<coinUnit.length; i++) {
 			System.out.printf("%d원 : %d%n", coinUnit[i], money/coinUnit[i]);
-			money -= money/coinUnit[i]*coinUnit[i];
+//			money -= money/coinUnit[i]*coinUnit[i];		// money = money % coinUnit[i] 를 길게 풀어쓴 식 
+			money %= coinUnit[i];
 		}
 	}
 	
@@ -181,12 +182,18 @@ class Ch05_Exercise {
 				   (만일 충분한 동전이 없다면 배열 coin에 있는 만큼만 뺀다.)
 				3. 금액에서 동전의 개수(coinNum)와 동전단위를 곱한 값을 뺀다.
 			*/
-			coinNum = money / coinUnit[i];
-			money -= coinUnit[i] * (coin[i]>=coinNum ? coinNum : coin[i]);
-			
-			System.out.println(coinUnit[i]+"원 : " + (coin[i]>=coinNum ? coinNum : coin[i]));
-			
-			coin[i] -= coin[i]>=coinNum ? coinNum : coin[i];
+//			coinNum = money / coinUnit[i];		// 이 부분에서 미리 coin 배열과 비교한 값을 넣지 않아서 아래에서 복잡해짐
+//												// 이후에 계속 coinNum과 coin[i] 크기 비교를 하는 소스를 보자.
+//												// 미리 비교한 후 그걸 이용하는 방향으로의 필요성을 느껴야 함
+//			money -= coinUnit[i] * (coin[i]>=coinNum ? coinNum : coin[i]);
+//			System.out.println(coinUnit[i]+"원 : " + (coin[i]>=coinNum ? coinNum : coin[i]));
+//			coin[i] -= coin[i]>=coinNum ? coinNum : coin[i];
+
+			/* 출제의도에 맞게 다시 해결 */
+			coinNum = money/coinUnit[i]<=coin[i] ? money/coinUnit[i] : coin[i];
+			coin[i] -= coinNum;
+			money -= coinUnit[i] * coinNum;
+			System.out.println(coinUnit[i]+"원 : "+coinNum);
 		}
 		
 		if (money > 0) {
