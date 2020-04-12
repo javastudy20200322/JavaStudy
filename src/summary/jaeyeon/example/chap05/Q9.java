@@ -20,19 +20,17 @@ public class Q9 {
 		}
 		System.out.println();
 
-		
 		for (int i = 0; i < star.length; i++) {
 			for (int j = 0; j < star[i].length; j++) {
 				System.out.printf("%c", star[i][j]);
-				
-				//위 star 배열을 시계방향으로 90도 회전시켜서 출력..
+
+				// 위 star 배열을 시계방향으로 90도 회전시켜서 출력..
 				// 넘모 어렵자너..
 			}
 			System.out.println();
 		}
 		System.out.println();
 
-		
 		for (int i = 0; i < result.length; i++) {
 			for (int j = 0; j < result[i].length; j++) {
 				System.out.print(result[i][j]);
@@ -40,8 +38,6 @@ public class Q9 {
 			System.out.println();
 		}
 
-		
-		
 	}
 
 }

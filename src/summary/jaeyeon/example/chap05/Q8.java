@@ -9,7 +9,7 @@ public class Q8 {
 		
 		for ( int i = 0 ; i< answer.length; i++) {
 			
-			
+			counter[answer[i]-1]++;
 		}
 		for ( int i = 0 ; i< counter.length; i++) {
 			

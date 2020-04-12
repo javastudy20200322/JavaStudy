@@ -12,11 +12,18 @@ public class Q5 {
 			int tmp = 0;
 
 			tmp = ballArr[j];
+			ballArr[i] = tmp;
+			ballArr[j] = ballArr[i];
 			System.out.printf("%d \t %d%n", j, ballArr[j]);
 
 		}
 		// 배열의 ballArr 의 앞에서 3개의 수를 배열 ball3로 복사한다.
 
+		for(int i = 0 ; i< ball3.length; i++) {
+			ball3[i] = ballArr[i];
+		}
+		
+		
 		for (int i = 0; i < ball3.length; i++) {
 			System.out.print(ball3[i]);
 		}
