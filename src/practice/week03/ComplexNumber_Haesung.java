@@ -2,6 +2,16 @@ package practice.week03;
 
 import java.util.Scanner;
 
+/**
+ * <pre>
+ * Date		: 2020. 4. 12.
+ * Author 	: pureboyz
+ * 
+ * 일단.. 지도가 변경되도 얼추 되는 것처럼 보이지만..
+ * 문제가 많은 코드임 ㅠㅠ
+ * 왜 잘되는지 나도 이해가 안되니까 다시 보자 ㅠ
+ * </pre>
+ */
 public class ComplexNumber_Haesung
 {
 	static Scanner scanner = new Scanner(System.in);
