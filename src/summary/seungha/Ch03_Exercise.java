@@ -1,4 +1,4 @@
-package summary.seungha.Ch03.Exercise;
+package summary.seungha;
 
 import java.util.*;
 import java.lang.Math;
