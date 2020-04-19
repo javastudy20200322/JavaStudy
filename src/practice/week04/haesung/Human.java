@@ -1,5 +1,13 @@
 package practice.week04.haesung;
 
+/**
+ * <pre>
+ * Date		: 2020. 4. 19.
+ * Author 	: pureboyz
+ * 
+ * 
+ * </pre>
+ */
 public class Human
 {
 	String 	name;
@@ -37,11 +45,18 @@ public class Human
 		return this.name + " " + this.day + " " + this.month + " " + this.year;
 	}
 	
-	public static Human getYoungerHuman(Human h1, Human h2)
-	{
-		return getOlderHuman(h1, h2).equals(h1) ? h2 : h1;
-	}
-	
+	/**
+	 * <pre>
+	 * MethodName	: getOlderHuman
+	 * Date 		: 2020. 4. 19.
+	 * Author		: pureboyz
+	 * 
+	 * Params		: Human h1, Human h2
+	 * ReturnType	: Human
+	 * 
+	 * 두 Human객체 h1, h2 중에서 나이가 더 많은 Human객체를 return한다.
+	 * </pre>
+	 */
 	public static Human getOlderHuman(Human h1, Human h2)
 	{
 		if(h1.getYear() < h2.getYear())
@@ -74,5 +89,23 @@ public class Human
 		{
 			return h2;
 		}
+	}
+	
+	/**
+	 * <pre>
+	 * MethodName	: getYoungerHuman
+	 * Date 		: 2020. 4. 19.
+	 * Author		: pureboyz
+	 * 
+	 * Params		: Human h1, Human h2
+	 * ReturnType	: Human
+	 * 
+	 * 두 Human객체 h1, h2 중에서 나이가 더 작은 Human객체를 return한다.
+	 * </pre>
+	 */
+	public static Human getYoungerHuman(Human h1, Human h2)
+	{
+		// getOlderHuman() 메소드를 이용하여 나온 결과를 반대로 return하면 나이가 더 작은 사람의 Human객체가 return된다.
+		return getOlderHuman(h1, h2).equals(h1) ? h2 : h1;
 	}
 }

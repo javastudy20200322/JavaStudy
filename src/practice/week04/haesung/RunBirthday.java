@@ -8,96 +8,45 @@ public class RunBirthday
 
 	public static void main(String[] args)
 	{
-		int arraySize = 0;
-		while((arraySize < 1) || (100 < arraySize))
-		{
-			arraySize = scanner.nextInt();
-		}
+		// Human 객체를 담는 배열 생성.
+		Human[] humanArr = new Human[scanner.nextInt()];
 		
-		Human[] humanArr = new Human[arraySize];
-		
+		// humanArr배열의 index 값을 대신할 변수.
 		int temp = 0;
+		// 반복문을 이용하여 생성한 Human객체를 humanArr배열에 담는다.
 		while(temp < humanArr.length)
 		{
+			// 새로운 Human객체 생성.
 			Human human = new Human();
 			
-			EXIT_NAME:
-			while(true)
-			{
-				String name = scanner.next();
-				if((1 <= name.length()) || (name.length() <= 15))
-				{
-					human.setName(name);
-					break EXIT_NAME;
-				}
-				else
-				{
-					System.out.println("이름을 다시 입력하세요.");
-				}
-			}
+			// 입력받은 내용을 토대로 Human객체를 만든다.
+			human.setName(scanner.next());
+			human.setDay(scanner.nextInt());
+			human.setMonth(scanner.nextInt());
+			human.setYear(scanner.nextInt());
 			
-			EXIT_DAY:
-			while(true)
-			{
-				int day = scanner.nextInt();
-				if((1 <= day) && (day <= 31))
-				{
-					human.setDay(day);
-					break EXIT_DAY;
-				}
-				else
-				{
-					System.out.println("일을 다시 입력하세요.");
-				}
-			}
-			
-			EXIT_MONTH:
-			while(true)
-			{
-				int month = scanner.nextInt();
-				if((1 <= month) || (month <= 12))
-				{
-					human.setMonth(month);
-					break EXIT_MONTH;
-				}
-				else
-				{
-					System.out.println("월을 다시 입력하세요.");
-				}
-			}
-			
-			EXIT_YEAR:
-			while(true)
-			{
-				int year = scanner.nextInt();
-				if((1 <= year) || (year <= 12))
-				{
-					human.setYear(year);
-					break EXIT_YEAR;
-				}
-				else
-				{
-					System.out.println("년도를 다시 입력하세요.");
-				}
-			}
-			
+			// 만들어진 Human객체를 humanArr배열의 temp인덱스에 담는다.
 			humanArr[temp] = human;
 			temp++;
 		}
 
+		// 가장 어린 사람의 Human객체를 담을 변수.
 		Human youngerHuman = null;
 		for(int i=0; i<humanArr.length; i++)
 		{
+			// 인덱스 값이 0인 객체는 youngerHuman 변수에 바로 담고
 			if(i == 0)
 			{
 				youngerHuman = humanArr[0];
 			}
+			// 나머지 객체는 youngerHuman에 담긴 객체와 비교하여 더 어린 객체를 youngerHuman에 담는다.
 			else
 			{
 				youngerHuman = Human.getYoungerHuman(youngerHuman, humanArr[i]);
 			}
 		}
 		
+		// 같은 방식으로 가장 나이 많은 사람의 Human객체를 olderHuman변수에 담는다.
 		Human olderHuman = null;
 		for(int i=0; i<humanArr.length; i++)
 		{
@@ -111,6 +60,7 @@ public class RunBirthday
 			}
 		}
 		
+		// 결과 출력.
 		System.out.println("가장 나이가 적은 사람 : " + youngerHuman.getName());
 		System.out.println("가장 나이가 많은 사람 : " + olderHuman.getName());
 		
