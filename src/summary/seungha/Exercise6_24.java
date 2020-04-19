@@ -9,8 +9,10 @@ package summary.seungha;
 class Exercise6_24 {
 	/* (1) abs 메서드를 작성하시오. */
 	static int abs(int value) {
-		if (value < 0) value = -value;
-		return value;
+//		if (value < 0) value = -value;
+//		return value;
+		/* 답안에서는 삼항연산자 사용 */
+		return value >= 0 ? value : -value;
 	}
 	
 	public static void main(String[] args) {
