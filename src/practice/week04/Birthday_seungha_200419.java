@@ -1,8 +1,8 @@
-package practice.week04.seungha;
+package practice.week04;
 
 import java.util.Scanner;
 
-public class Birthday {
+public class Birthday_seungha_200419 {
 
 		public static void main(String[] args) {
 			
