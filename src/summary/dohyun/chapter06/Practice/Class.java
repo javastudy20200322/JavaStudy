@@ -124,6 +124,7 @@ public class Class {
 		System.out.println(s.info());
 
 	}
+}
 
 //	public void ex6() {
 //
