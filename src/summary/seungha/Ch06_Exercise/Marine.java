@@ -1,4 +1,4 @@
-package summary.seungha;
+package summary.seungha.Ch06_Exercise;
 
 /* Exercise 6-9. 다음은 컴퓨터 게임의 병사(marine)를 클래스로 정의한 것이다.
  * 이 클래스의 멤버 중에 static을 붙여야 하는 것은 어떤 것들이고 그 이유는 무엇인가?

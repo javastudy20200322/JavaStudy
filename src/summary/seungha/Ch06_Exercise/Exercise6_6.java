@@ -1,4 +1,4 @@
-package summary.seungha;
+package summary.seungha.Ch06_Exercise;
 
 /* Exercis 6-6. 두 점의 거리를 계산하는 getDistance()를 완성하시오.
  * [Hint] 제곱근 계산은 Math.sqrt(double a)를 사용하면 된다.

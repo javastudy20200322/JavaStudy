@@ -1,4 +1,4 @@
-package summary.seungha;
+package summary.seungha.Ch06_Exercise;
 
 /* Exercise 6-8. 다음의 코드에 정의된 변수들을 종류별로 구분해서 적으시오.
  */

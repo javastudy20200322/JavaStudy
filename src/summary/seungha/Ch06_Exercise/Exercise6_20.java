@@ -1,4 +1,4 @@
-package summary.seungha;
+package summary.seungha.Ch06_Exercise;
 
 /* Exercise 6-20. 다음과 같이 정의된 메서드를 작성하고 테스트하시오.
  * [주의] Math.random()을 사용하는 경우 실행결과와 다를 수 있음

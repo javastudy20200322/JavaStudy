@@ -1,4 +1,4 @@
-package summary.seungha;
+package summary.seungha.Ch06_Exercise;
 
 /* Exercise 6-5. 다음과 같은 실행결과를 얻도록 Student 클래스에 생성자와 info()를 추가하시오.
  * [실행결과]

@@ -1,4 +1,4 @@
-package summary.seungha;
+package summary.seungha.Ch06_Exercise;
 
 /* Exercise 6-18. 다음의 코드를 컴파일하면 에러가 발생한다.
  * 컴파일 에러가 발생하는 라인과 그 이유를 설명하시오.

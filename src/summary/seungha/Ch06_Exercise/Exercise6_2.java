@@ -1,4 +1,4 @@
-package summary.seungha;
+package summary.seungha.Ch06_Exercise;
 
 /* Exercise 6-1. 다음과 같은 멤버변수를 갖는 SutdaCard 클래스를 정의하시오.
  * int num 카드의 숫자 (1~10 사이의 정수)
