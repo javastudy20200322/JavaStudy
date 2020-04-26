@@ -19,7 +19,6 @@ public class Q23 {
 			}
 			return temp;
 		}
-
 	}
 
 	public static void main(String[] args) {
@@ -28,7 +27,7 @@ public class Q23 {
 
 		System.out.println(java.util.Arrays.toString(data));
 		System.out.println("최대값 : " + max(data));
-		// System.out.println("최대값 : " + max(null));
+	 System.out.println("최대값 : " + max(null));
 		System.out.println("최대값 : " + max(new int[] {}));
 	}
 

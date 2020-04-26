@@ -11,16 +11,17 @@ class Student {
 	
 	//Q4 메소드
 	int getTotal() {
-		int sum = 0;
-		sum = kor + eng + math;
-		return sum;
-		
+		/*
+		 * int sum = 0; sum = kor + eng + math; return sum;
+		 */
+		return kor + eng + math;
 	}
 	//Q4 메소드
 	float getAverage() {
-		float average = 0;
-		average = (float)getTotal()/3;
-		return average;
+		/*
+		 * float average = 0; average = (float)getTotal()/3; return average;
+		 */
+		return (int)(getTotal() / 3f * 10 + 0.5f) / 10f;
 		
 	}
 	

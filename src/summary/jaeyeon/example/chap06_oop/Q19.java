@@ -2,8 +2,9 @@ package summary.jaeyeon.example.chap06_oop;
 
 public class Q19 {
 
-	public static void change(String str) {
+	public static String change(String str) {
 		str += "456";
+		return str;
 	}
 
 	public static void main(String[] args) {
