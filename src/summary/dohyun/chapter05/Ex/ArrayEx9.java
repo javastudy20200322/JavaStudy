@@ -1,5 +1,4 @@
-package chapter05.Ex;
-
+package summary.dohyun.chapter05.Ex;
 import java.lang.reflect.Array;
 import java.util.Arrays;
 

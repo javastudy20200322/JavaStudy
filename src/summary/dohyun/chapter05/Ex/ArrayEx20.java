@@ -1,4 +1,4 @@
-package chapter05.Ex;
+package summary.dohyun.chapter05.Ex;
 
 import java.util.Scanner;
 
