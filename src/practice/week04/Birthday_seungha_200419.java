@@ -1,8 +1,8 @@
-package practice.week04.seungha;
+package practice.week04;
 
 import java.util.Scanner;
 
-public class Birthday {
+public class Birthday_seungha_200419 {
 
 		public static void main(String[] args) {
 			
@@ -17,6 +17,7 @@ public class Birthday {
 			int year = scanner.nextInt();
 			arrStudent[i] = new Student(name, day, month, year);
 		}
+		scanner.close();
 		
 		/* 출력부 */
 		System.out.println(Student.younger(arrStudent).name);
