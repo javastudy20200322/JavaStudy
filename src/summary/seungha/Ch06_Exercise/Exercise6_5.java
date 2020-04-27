@@ -6,13 +6,13 @@ package summary.seungha.Ch06_Exercise;
  */
 class Exercise6_5 {
 	public static void main(String args[]) {
-		Student s = new Student("홍길동", 1, 1, 100, 60, 76);
+		Student5 s = new Student5("홍길동", 1, 1, 100, 60, 76);
 		
 		System.out.println(s.info());
 	}
 }
 
-class Student {
+class Student5 {
 	/* (1) 알맞은 코드를 넣어 완성하시오. */
 	String name;
 	int num;
@@ -23,7 +23,7 @@ class Student {
 	int sum;
 	float avg;
 	
-	Student(String name, int num, int ban, int kor, int eng, int math) {
+	Student5(String name, int num, int ban, int kor, int eng, int math) {
 		
 		/* (1) 알맞은 코드를 넣어 완성하시오. */
 		this.name = name;

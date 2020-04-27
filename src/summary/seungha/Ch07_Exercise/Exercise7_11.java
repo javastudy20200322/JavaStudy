@@ -16,7 +16,7 @@ package summary.seungha.Ch07_Exercise;
  */
 class Exercise7_11 {
 	public static void main(String[] args) {
-		MyTv2 t = new MyTv2();
+		MyTv11 t = new MyTv11();
 		
 		t.setChannel(10);
 		System.out.println("CH : " + t.getChannel());
@@ -29,7 +29,7 @@ class Exercise7_11 {
 	}
 }
  
-class MyTv2 {
+class MyTv11 {
 	private boolean	isPowerOn;
 	private int 	channel;
 	private int		volume;
