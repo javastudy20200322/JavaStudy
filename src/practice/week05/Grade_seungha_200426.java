@@ -6,8 +6,6 @@ public class Grade_seungha_200426 {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-
-		int subject = 3;
 		
 		Scanner scanner = new Scanner(System.in);
 		int cnt = scanner.nextInt();
@@ -22,10 +20,7 @@ public class Grade_seungha_200426 {
 			studentArr[i] = new Student(name, kor, eng, mat);
 		}
 		
-		studentArr = Grade.sortKor(studentArr);
-		studentArr = Grade.sortEng(studentArr);
-		studentArr = Grade.sortMat(studentArr);
-		studentArr = Grade.sortName(studentArr);
+		studentArr = Report.getInstance().sort(studentArr);
 		
 		for (int i=0; i<cnt; i++) {
 			System.out.println(studentArr[i].getName());
@@ -76,22 +71,21 @@ class Student {
 }
 
 /* 성적을 정렬하는 용도로 만든 singleton class */
-class Grade {
+class Report {
 	
-	private static Grade grade = new Grade();
+	private static Report report = new Report();
 	
-	private Grade() {}
+	private Report() {}
 	
 	/* singleton pattern */
-	static Grade getInstance() {
-		if (grade==null) grade = new Grade();
-		return grade;
+	static Report getInstance() {
+		if (report==null) report = new Report();
+		return report;
 	}
 	
-	/* 정렬 관련 메서드 */
-	/* 국어 점수 내림차순 */
-	static Student[] sortKor(Student[] studentArr) {
-		/* 버블 정렬, 내림차순 */
+	/* 정렬 메서드 */
+	Student[] sort(Student[] studentArr) {
+		/* 국어 점수 내림차순, 버블 정렬 */
 		for (int i=studentArr.length-1; i>0; i--) {
 			for (int j=studentArr.length-1; j>studentArr.length-1-i; j--) {
 				if (studentArr[j].getKor()>studentArr[j-1].getKor()) {
@@ -101,12 +95,8 @@ class Grade {
 				}
 			}
 		}
-		return studentArr;
-	}
-	
-	/* 영어 점수 오름차순 */
-	static Student[] sortEng(Student[] studentArr) {
-		/* 버블 정렬, 오름차순 */
+		
+		/* 영어 점수 오름차순, 버블 정렬 */
 		for (int i=0; i<studentArr.length-1; i++) {
 			for (int j=0; j<studentArr.length-1-i; j++) {
 				if (studentArr[j].getKor()==studentArr[j+1].getKor()) {
@@ -118,12 +108,8 @@ class Grade {
 				}
 			}
 		}
-		return studentArr;
-	}
-	
-	/* 수학 점수 오름차순 */
-	static Student[] sortMat(Student[] studentArr) {
-		/* 버블 정렬, 내림차순 */
+		
+		/* 수학 점수 내림차순, 버블 정렬 */
 		for (int i=studentArr.length-1; i>0; i--) {
 			for (int j=studentArr.length-1; j>studentArr.length-1-i; j--) {
 				if (studentArr[j].getKor()==studentArr[j-1].getKor() && studentArr[j].getEng()==studentArr[j-1].getEng()) {
@@ -135,12 +121,8 @@ class Grade {
 				}
 			}
 		}
-		return studentArr;
-	}
-	
-	/* 이름 사전순 */
-	static Student[] sortName(Student[] studentArr) {
-		/* 버블 정렬, 오름차순 */
+		
+		/* 이름 사전순(오름차순), 버블 정렬 */
 		for (int i=0; i<studentArr.length-1; i++) {
 			for (int j=0; j<studentArr.length-1-i; j++) {
 				for (int k=0; k<(studentArr[j].getName().length()<studentArr[j+1].getName().length()?studentArr[j].getName().length():studentArr[j+1].getName().length()); k++) {
@@ -161,6 +143,8 @@ class Grade {
 				}
 			}
 		}
+		
 		return studentArr;
 	}
+	
 }
