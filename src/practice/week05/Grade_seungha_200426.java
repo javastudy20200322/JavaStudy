@@ -8,8 +8,8 @@ public class Grade_seungha_200426 {
 		// TODO Auto-generated method stub
 		
 		Scanner scanner = new Scanner(System.in);
-		int cnt = scanner.nextInt();
 		
+		int cnt = scanner.nextInt();
 		Student[] studentArr = new Student[cnt];
 		
 		for (int i=0; i<cnt; i++) {
