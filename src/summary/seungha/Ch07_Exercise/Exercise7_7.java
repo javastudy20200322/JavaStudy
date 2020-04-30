@@ -9,8 +9,8 @@ class Exercise7_7 {
 	public static void main(String[] args) {
 		Child c = new Child();
 		
-		System.out.println("c.x = " + c.x);				// ★ 200이 출력됨. 이유를 알 수 없음
-		System.out.println("c.getX() = " + c.getX());	// ★ getX() 메서드가 없다는 컴파일 에러. 이유를 알 수 없음
+		System.out.println("c.x = " + c.x);				// c.x = 1000
+		System.out.println("c.getX() = " + c.getX());	// c.getX() = 200
 	}
 }
 
