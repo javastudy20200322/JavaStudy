@@ -7,12 +7,12 @@ package practice.week06;
  *  2. 다음 실행결과를 출력하도록 StackApp 클래스에 main() 메서드를 작성하시오.
  *  [실행결과]
  *  총 스택 저장 공간의 크기 입력 >> 3
- *  문자열 입력 >> hello
- *  문자열 입력 >> world
- *  문자열 입력 >> java
- *  문자열 입력 >> try
+ *  문자열 입력 (종료는 0) >> hello
+ *  문자열 입력 (종료는 0) >> world
+ *  문자열 입력 (종료는 0) >> java
+ *  문자열 입력 (종료는 0) >> try
  *  Stack이 가득 차서 넣을 수 없습니다.
- *  문자열 입력 >> 0
+ *  문자열 입력 (종료는 0) >> 0
  *  스택에 저장된 모든 문자열 출력 : java world hello
  *  [조건]
  *  IndexOutOfBoundsException 예외를 처리하는 try-catch문을 포함하시오.
