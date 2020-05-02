@@ -1,7 +1,7 @@
 package practice.week06;
 
 /** [날짜] 2020-05-10
- *  [참고] 명품 JAVA Programming
+ *  [참고] 명품 JAVA Programming 인터페이스 단원 문제 변형
  *  [문제]
  *  1. 주어진 Stack 인터페이스를 상속받아 문자열을 Stack 자료구조로 저장하는 StringStack 클래스를 구현하시오.
  *  2. 다음 실행결과를 출력하도록 StackApp 클래스에 main() 메서드를 작성하시오.
@@ -11,9 +11,11 @@ package practice.week06;
  *  문자열 입력 >> world
  *  문자열 입력 >> java
  *  문자열 입력 >> try
- *  스택이 꽉 차서 푸시 불가!
+ *  Stack이 가득 차서 넣을 수 없습니다.
  *  문자열 입력 >> 0
  *  스택에 저장된 모든 문자열 출력 : java world hello
+ *  [조건]
+ *  IndexOutOfBoundsException 예외를 처리하는 try-catch문을 포함하시오.
  */
 public interface Stack {
 	
