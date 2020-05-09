@@ -5,29 +5,29 @@ package summary.seungha.Ch07_Exercise;
  */
 class Exercise7_5 {
 	public static void main(String[] args) {
-		Tv t = new Tv();
+		Tv1 t = new Tv1();
 	}
 }
  
-class Product {
+class Product1 {
 	int price;			// 제품의 가격
 	int bonusPoint;		// 제품 구매 시 제공하는 보너스 점수
 	
-	Product(int price) {
+	Product1(int price) {
 		this.price = price;
 		bonusPoint = price/10;
 	}
 }
 
-class Tv extends Product {
-//	Tv() {}				/* [답] 컴파일 에러 발생하는 부분 */
+class Tv1 extends Product1 {
+//	Tv1() {}				/* [답] 컴파일 에러 발생하는 부분 */
 	// 컴파일러가 생성자의 첫 줄에 super();를 삽입하는데,
-	// 조상 클래스인 Product에는 Product()가 존재하지 않으며,
+	// 조상 클래스인 Product1에는 Product1()가 존재하지 않으며,
 	// 다른 생성자가 있어서 컴파일러는 이 생성자를 자동 추가해주지 않는다.
 	// 코드를 수정하면 아래의 한 줄과 같다.
-	Tv() { super(100); }
+	Tv1() { super(100); }
 	
 	public String toString() {
-		return "Tv";
+		return "Tv1";
 	}
 }

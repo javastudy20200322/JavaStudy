@@ -1,4 +1,4 @@
-package summary.hyunjin;
+package summary.hyunjin.practice;
 
 import java.util.Scanner;
 
@@ -44,7 +44,7 @@ public class Chapter04_IFSwitchForWhile {
 		int year = sc.nextInt();
 		boolean powerOn = false;
 		
-		//1ë²ˆ
+		//1ë²?
 		if(x>10 && x<20) powerOn = true;
 		//2
 		if(ch!=' ' || ch!='\t') powerOn = true;
@@ -94,7 +94,7 @@ public class Chapter04_IFSwitchForWhile {
 			total+=i;
 			
 			if(total==100) {
-				System.out.println("ìˆ˜: " + i);
+				System.out.println("?ˆ˜: " + i);
 				break;
 			}	
 		}
@@ -143,8 +143,8 @@ public class Chapter04_IFSwitchForWhile {
 		System.out.println(str.toString());
 	}
 	
-	public static void Exercise4_9() {//ë‹µì§€ì— -0í•´ë¼ëŠ”ë° ì™œ ê·¸ëŸ°ì§€ ì˜ ëª¨ë¥´ê²Ÿë‹¤.
-		String str = "12345";//ì¼ë°˜ ì‹­ì§„ìˆ˜ ë”í•˜ëŠ”ê²ƒ ì²˜ëŸ¼ '0'ì˜ ìœ ë‹ˆì½”ë“œê°’ì—ë‹¤ê°€'1'ì„ ë”í•˜ë©´ '1'ì˜ ìœ ë‹ˆì½”ë“œê°’ì´ ëœë‹¤.??
+	public static void Exercise4_9() {//?‹µì§??— -0?•´?¼?Š”?° ?™œ ê·¸ëŸ°ì§? ?˜ ëª¨ë¥´ê²Ÿë‹¤.
+		String str = "12345";//?¼ë°? ?‹­ì§„ìˆ˜ ?”?•˜?Š”ê²? ì²˜ëŸ¼ '0'?˜ ?œ ?‹ˆì½”ë“œê°’ì—?‹¤ê°?'1'?„ ?”?•˜ë©? '1'?˜ ?œ ?‹ˆì½”ë“œê°’ì´ ?œ?‹¤.??
 		int sum = 0;
 	
 		for(int i=0; i<str.length(); i++) {
@@ -211,9 +211,9 @@ public class Chapter04_IFSwitchForWhile {
 		}
 		
 		if(isNumber) {
-			System.out.println(value+"ëŠ” ìˆ«ìì…ë‹ˆë‹¤.");
+			System.out.println(value+"?Š” ?ˆ«??…?‹ˆ?‹¤.");
 		}else {
-			System.out.println(value+"ëŠ” ìˆ«ìê°€ ì•„ë‹™ë‹ˆë‹¤.");
+			System.out.println(value+"?Š” ?ˆ«?ê°? ?•„?‹™?‹ˆ?‹¤.");
 		}
 	}
 	
@@ -226,17 +226,17 @@ public class Chapter04_IFSwitchForWhile {
 		
 		do {
 			count++;
-			System.out.println("1ê³¼ 100ì‚¬ì´ì˜ ê°’ì„ ì…ë ¥í•˜ì„¸ìš” : ");
+			System.out.println("1ê³? 100?‚¬?´?˜ ê°’ì„ ?…? ¥?•˜?„¸?š” : ");
 			input = s.nextInt();
 			
 			if(answer==input) {
-				System.out.println(count + "ë²ˆì§¸ ì„±ê³µí•˜ì…¨ìŠµë‹ˆë‹¤.");
+				System.out.println(count + "ë²ˆì§¸ ?„±ê³µí•˜?…¨?Šµ?‹ˆ?‹¤.");
 				break;
 			}else {
 				if(input > answer) 
-					System.out.println("ì…ë ¥í•˜ì‹  ê°’ë³´ë‹¤ ì‘ìŠµë‹ˆë‹¤.\n");
+					System.out.println("?…? ¥?•˜?‹  ê°’ë³´?‹¤ ?‘?Šµ?‹ˆ?‹¤.\n");
 				else 
-					System.out.println("ì…ë ¥í•˜ì‹  ê°’ë³´ë‹¤ í½ë‹ˆë‹¤.\n");
+					System.out.println("?…? ¥?•˜?‹  ê°’ë³´?‹¤ ?½?‹ˆ?‹¤.\n");
 			}
 
 		}while(true);
@@ -255,9 +255,9 @@ public class Chapter04_IFSwitchForWhile {
 		}
 		
 		if(number==result) 
-			System.out.println(number + "ëŠ” íšŒë¬¸ìˆ˜ ì…ë‹ˆë‹¤.");
+			System.out.println(number + "?Š” ?šŒë¬¸ìˆ˜ ?…?‹ˆ?‹¤.");
 		else
-			System.out.println(number + "ëŠ” íšŒë¬¸ìˆ˜ê°€ ì•„ë‹™ë‹ˆë‹¤.");
+			System.out.println(number + "?Š” ?šŒë¬¸ìˆ˜ê°? ?•„?‹™?‹ˆ?‹¤.");
 	}
 	
 }

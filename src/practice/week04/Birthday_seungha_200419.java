@@ -9,61 +9,61 @@ public class Birthday_seungha_200419 {
 		/* 입력부 */
 		Scanner scanner  = new Scanner(System.in);
 		int count = scanner.nextInt();
-		Student[] arrStudent = new Student[count];
+		Student1[] arrStudent1 = new Student1[count];
 		for  (int i=0; i<count; i++) {
 			String name = scanner.next();
 			int day = scanner.nextInt();
 			int month = scanner.nextInt();
 			int year = scanner.nextInt();
-			arrStudent[i] = new Student(name, day, month, year);
+			arrStudent1[i] = new Student1(name, day, month, year);
 		}
 		scanner.close();
 		
 		/* 출력부 */
-		System.out.println(Student.younger(arrStudent).name);
-		System.out.println(Student.older(arrStudent).name);
+		System.out.println(Student1.younger(arrStudent1).name);
+		System.out.println(Student1.older(arrStudent1).name);
 	}
 }
 
 
-class Student {
+class Student1 {
 	String name;
 	int day;
 	int month;
 	int year;
 	
-	Student() { }
+	Student1() { }
 	
-	Student(String name, int day, int month, int year) {
+	Student1(String name, int day, int month, int year) {
 		this.name = name;
 		this.day = day;
 		this.month = month;
 		this.year = year;
 	}
 	
-	static Student younger(Student[] arrStudent) {
-		Student younger = arrStudent[0];
-		for (int i=1; i<arrStudent.length; i++) {
-			if (younger.year < arrStudent[i].year) {
-				younger = arrStudent[i];
-			} else if (younger.year == arrStudent[i].year && younger.month < arrStudent[i].month) {
-				younger = arrStudent[i];
-			} else if (younger.year == arrStudent[i].year && younger.month == arrStudent[i].month && younger.day < arrStudent[i].day) {
-				younger = arrStudent[i];
+	static Student1 younger(Student1[] arrStudent1) {
+		Student1 younger = arrStudent1[0];
+		for (int i=1; i<arrStudent1.length; i++) {
+			if (younger.year < arrStudent1[i].year) {
+				younger = arrStudent1[i];
+			} else if (younger.year == arrStudent1[i].year && younger.month < arrStudent1[i].month) {
+				younger = arrStudent1[i];
+			} else if (younger.year == arrStudent1[i].year && younger.month == arrStudent1[i].month && younger.day < arrStudent1[i].day) {
+				younger = arrStudent1[i];
 			}
 		}
  		return younger;
 	}
 	
-	static Student older(Student[] arrStudent) {
-		Student older = arrStudent[0];
-		for (int i=1; i<arrStudent.length; i++) {
-			if (older.year > arrStudent[i].year) {
-				older = arrStudent[i];
-			} else if (older.year == arrStudent[i].year && older.month > arrStudent[i].month) {
-				older = arrStudent[i];
-			} else if (older.year == arrStudent[i].year && older.month == arrStudent[i].month && older.day > arrStudent[i].day) {
-				older = arrStudent[i];
+	static Student1 older(Student1[] arrStudent1) {
+		Student1 older = arrStudent1[0];
+		for (int i=1; i<arrStudent1.length; i++) {
+			if (older.year > arrStudent1[i].year) {
+				older = arrStudent1[i];
+			} else if (older.year == arrStudent1[i].year && older.month > arrStudent1[i].month) {
+				older = arrStudent1[i];
+			} else if (older.year == arrStudent1[i].year && older.month == arrStudent1[i].month && older.day > arrStudent1[i].day) {
+				older = arrStudent1[i];
 			}
 		}
  		return older;

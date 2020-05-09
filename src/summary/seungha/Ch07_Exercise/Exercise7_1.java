@@ -18,27 +18,27 @@ class Exercise7_1 {
 
 class SutdaDeck {
 	final int CARD_NUM = 20;
-	SutdaCard[] cards = new SutdaCard[CARD_NUM];
+	SutdaCard1[] cards = new SutdaCard1[CARD_NUM];
 	
 	SutdaDeck() {
 		/* (1) 배열 SutdaCard를 적절히 초기화 하시오. */
 		for (int i=0; i<CARD_NUM; i++) {
 			boolean isKwang = false;
 			if ((i==1-1 || i==3-1 || i==8-1) && i/10==0) isKwang = true;
-			cards[i] = new SutdaCard((i)%10+1, isKwang);
+			cards[i] = new SutdaCard1((i)%10+1, isKwang);
 		}
 	}
 }
 
-class SutdaCard {
+class SutdaCard1 {
 	int num;
 	boolean isKwang;
 
-	SutdaCard()	{
+	SutdaCard1()	{
 		this(1, true);
 	}
 	
-	SutdaCard(int num, boolean isKwang) {
+	SutdaCard1(int num, boolean isKwang) {
 		this.num = num;
 		this.isKwang = isKwang;
 	}

@@ -18,7 +18,7 @@ package summary.seungha.Ch07_Exercise;
  */
 class Exercise7_2 {
 	public static void main(String args[]) {
-		SutdaDeck deck = new SutdaDeck();
+		SutdaDeck2 deck = new SutdaDeck2();
 		
 		System.out.println(deck.pick(0));
 		System.out.println(deck.pick());
@@ -32,16 +32,16 @@ class Exercise7_2 {
 	}
 }
 
-class SutdaDeck {
+class SutdaDeck2 {
 	final int CARD_NUM = 20;
-	SutdaCard[] cards = new SutdaCard[CARD_NUM];
+	SutdaCard2[] cards = new SutdaCard2[CARD_NUM];
 	
-	SutdaDeck() {
+	SutdaDeck2() {
 		/* 문제 7-1의 답 (문제에선 생략함) */
 		for (int i=0; i<CARD_NUM; i++) {
 			boolean isKwang = false;
 			if ((i==1-1 || i==3-1 || i==8-1) && i/10==0) isKwang = true;
-			cards[i] = new SutdaCard((i)%10+1, isKwang);
+			cards[i] = new SutdaCard2((i)%10+1, isKwang);
 		}
 	}
 	
@@ -49,7 +49,7 @@ class SutdaDeck {
 	
 	/* 배열 cards에 담긴 카드의 위치를 뒤섞는다. */
 	void shuffle() {
-		SutdaCard tmp = new SutdaCard();
+		SutdaCard2 tmp = new SutdaCard2();
 		for (int i=0; i<cards.length; i++) {
 			int j = (int)(Math.random()*(cards.length-1));
 			tmp = cards[i];
@@ -59,26 +59,26 @@ class SutdaDeck {
 	}
 	
 	/* 배열 cards에서 지정된 위치의 SutdaCard를 반환한다. */
-	SutdaCard pick(int index) {
+	SutdaCard2 pick(int index) {
 		return cards[index];
 	}
 	
 	/* 배열 cards에서 임의의 위치의 SutdaCard를 반환한다. */
-	SutdaCard pick() {
+	SutdaCard2 pick() {
 		return cards[(int)(Math.random()*(cards.length-1))];
 	}
 	
 }	// SutdaDeck
 
-class SutdaCard {
+class SutdaCard2 {
 	int num;
 	boolean isKwang;
 
-	SutdaCard()	{
+	SutdaCard2()	{
 		this(1, true);
 	}
 	
-	SutdaCard(int num, boolean isKwang) {
+	SutdaCard2(int num, boolean isKwang) {
 		this.num = num;
 		this.isKwang = isKwang;
 	}

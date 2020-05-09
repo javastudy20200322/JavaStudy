@@ -1,4 +1,4 @@
-package summary.hyunjin;
+package summary.hyunjin.practice;
 
 public class Chapter03_Operator {
 
@@ -31,18 +31,18 @@ public class Chapter03_Operator {
 		int y = 5;
 		char c = 'A'; 
 		char test = 'B';
-		System.out.println(1 + x << 33);; // 1+x = 3, 3ì˜ 2ì§„ìˆ˜ë¥¼ ì™¼ìª½ìœ¼ë¡œ 33ë²ˆ ì´ë™
-		System.out.println(y >= 5 || x < 0 && x > 2); //ìš°ì„ ìˆœìœ„ : ë¶€ë“±í˜¸ > && > || , xê´€ë ¨ë‚´ìš©ì€ ë‹¤  falseì§€ë§Œ yëŠ” trueë¼ì„œ true
-		System.out.println(y += 10 - x++); //y= (y+10) -(x=x+1 ë‹¨ xëŠ” í›„ìœ„í˜•ì´ê¸°ì— 2ë¡œì„œ ì—°ì‚°ì´ë¨) , y = 15 - 2 , y=12
-		//++i ì™€ i++ì˜ ì°¨ì´ëŠ” ì „ìëŠ” ë§ì…ˆì—°ì‚°ì„ ë¨¼ì €í•˜ê³  ê·¸ í›„ì— ëŒ€ì…ì„ í•˜ëŠ”ê±°ê³  í›„ìëŠ” ëŒ€ì…(ì‚¬ìš©)ì„ ë¨¼ì €ì‹œí‚¨ ë‹¤ìŒì— ë§ì…ˆì—°ì‚°ì„ í•œë‹¤ê³  ìƒê°í•˜ë©´ ë˜ë‚˜
-		System.out.println(x+=2); //x=x+2, ì´ë•Œ xëŠ” ìœ„ì˜ ì—°ì‚°ì„ í†µí•´ 2ê°€ ì•„ë‹Œ 3ì´ë¨ -> x=3+2 -> 5
-		System.out.println(!('A' <= c && c <='Z')); //ì²«ê´„í˜¸ì˜ ê°’ì€  trueì§€ë§Œ !ë¶™ì–´ì„œ false
-		System.out.println('C'-c); // Cì˜ ìœ ë‹ˆì½”ë“œ ê°’ì€ 67 ë³€ìˆ˜ cì˜ ê°’ Aì˜ ìœ ë‹ˆì½”ë“œëŠ” 65 -> 67-65 =2 
-		System.out.println('5'-'0'); //ìˆ«ìë¡œ ì—°ì‚°
-		System.out.println(c+1); //ë³€ìˆ˜cì˜ ê°’ Aìœ ë‹ˆì½”ë“œëŠ” 65, 65+1=66;
+		System.out.println(1 + x << 33);; // 1+x = 3, 3?˜ 2ì§„ìˆ˜ë¥? ?™¼ìª½ìœ¼ë¡? 33ë²? ?´?™
+		System.out.println(y >= 5 || x < 0 && x > 2); //?š°?„ ?ˆœ?œ„ : ë¶??“±?˜¸ > && > || , xê´?? ¨?‚´?š©?? ?‹¤  falseì§?ë§? y?Š” true?¼?„œ true
+		System.out.println(y += 10 - x++); //y= (y+10) -(x=x+1 ?‹¨ x?Š” ?›„?œ„?˜•?´ê¸°ì— 2ë¡œì„œ ?—°?‚°?´?¨) , y = 15 - 2 , y=12
+		//++i ?? i++?˜ ì°¨ì´?Š” ? „??Š” ?§?…ˆ?—°?‚°?„ ë¨¼ì??•˜ê³? ê·? ?›„?— ???…?„ ?•˜?Š”ê±°ê³  ?›„??Š” ???…(?‚¬?š©)?„ ë¨¼ì??‹œ?‚¨ ?‹¤?Œ?— ?§?…ˆ?—°?‚°?„ ?•œ?‹¤ê³? ?ƒê°í•˜ë©? ?˜?‚˜
+		System.out.println(x+=2); //x=x+2, ?´?•Œ x?Š” ?œ„?˜ ?—°?‚°?„ ?†µ?•´ 2ê°? ?•„?‹Œ 3?´?¨ -> x=3+2 -> 5
+		System.out.println(!('A' <= c && c <='Z')); //ì²«ê´„?˜¸?˜ ê°’ì?  trueì§?ë§? !ë¶™ì–´?„œ false
+		System.out.println('C'-c); // C?˜ ?œ ?‹ˆì½”ë“œ ê°’ì? 67 ë³??ˆ˜ c?˜ ê°? A?˜ ?œ ?‹ˆì½”ë“œ?Š” 65 -> 67-65 =2 
+		System.out.println('5'-'0'); //?ˆ«?ë¡? ?—°?‚°
+		System.out.println(c+1); //ë³??ˆ˜c?˜ ê°? A?œ ?‹ˆì½”ë“œ?Š” 65, 65+1=66;
 		System.out.println(++c); //c=c+1, c= 65+1 -> 66
-		System.out.println(c++); //66, í˜¸ì¶œ ë˜ì–´ì§„ í›„ì— ë§ì…ˆì˜ˆì • 
-		System.out.println(c); //ìœ„ì˜ ì—°ì‚°ìœ¼ë¡œ c=c+1ì´ ë˜ì–´ 67 -> Cì¶œë ¥
+		System.out.println(c++); //66, ?˜¸ì¶? ?˜?–´ì§? ?›„?— ?§?…ˆ?˜ˆ? • 
+		System.out.println(c); //?œ„?˜ ?—°?‚°?œ¼ë¡? c=c+1?´ ?˜?–´ 67 -> Cì¶œë ¥
 		
 	}
 	
@@ -51,12 +51,12 @@ public class Chapter03_Operator {
 		int sizeOfBucket = 10;
 		int numOfBucket = numOfApples%sizeOfBucket == 0 ? numOfApples/sizeOfBucket : numOfApples/sizeOfBucket +1;
 		
-		System.out.println("í•„ìš”í•œ ë°”êµ¬ë‹ˆì˜ ìˆ˜  : " + numOfBucket);
+		System.out.println("?•„?š”?•œ ë°”êµ¬?‹ˆ?˜ ?ˆ˜  : " + numOfBucket);
 	}
 	
 	public static void Exercise3_3() {
 		int num = 10;
-		System.out.println( num > 0 ? "ì–‘ìˆ˜" : num < 0 ? "ìŒìˆ˜" : "0" );
+		System.out.println( num > 0 ? "?–‘?ˆ˜" : num < 0 ? "?Œ?ˆ˜" : "0" );
 	}
 	
 	public static void Exercise3_4() {
