@@ -19,7 +19,7 @@ import java.util.Scanner;
  *  [조건]
  *  IndexOutOfBoundsException 예외를 처리하는 try-catch문을 포함하시오.
  */
-interface Stack_seungha_200510 {
+interface Stack_seungha {
 	int length();							// Stack에 저장된 항목의 개수 반환
 	int capacity();						// Stack에 저장 가능한 항목의 개수 반환
 	String pop();							// Stack에서 항목을 꺼내고 이를 반환
@@ -27,7 +27,7 @@ interface Stack_seungha_200510 {
 }
 
 /* [문제] 1. 주어진 Stack 인터페이스를 상속받아 문자열을 Stack 자료구조로 저장하는 StringStack 클래스를 구현하시오. */
-class StringStack_seungha implements Stack_seungha_200510 {
+class StringStack_seungha implements Stack_seungha {
 
 	String[] strArr;		// String 배열
 	int cnt = 0;			// 배열에 들어있는 항목의 개수
@@ -95,7 +95,7 @@ class StringStack_seungha implements Stack_seungha_200510 {
  *  문자열 입력 (종료는 0) >> 0
  *  스택에 저장된 모든 문자열 출력 : java world hello
  */
-class StackApp_seungha {
+class StackApp_seungha_200510 {
 	public static void main(String[] args) {
 
 		System.out.print("총 스택 저장 공간의 크기 입력 >> ");
