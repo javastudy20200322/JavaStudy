@@ -98,7 +98,7 @@ class StackApp_seungha {
 		
 		stack.strArr = new String[size];
 		
-		do {
+		while(true) {
 			System.out.print("문자열 입력 (종료는 0) >> ");
 			String input = scanner.next();
 			if(input.equals("0")) {
@@ -107,7 +107,7 @@ class StackApp_seungha {
 				break;
 			}
 			stack.push(input);
-		} while(true);
+		}
 
 		scanner.close();
 	}
