@@ -17,6 +17,9 @@ class Parent {
 	int getX() {
 		return x;
 	}
+	void method() {
+		System.out.println("Parent Method");
+	}
 }
 
 class Child extends Parent{
@@ -29,6 +32,9 @@ class Child extends Parent{
 	Child(int x){
 		this.x = x;
 	}
+	void method() {
+		System.out.println("Child Method");
+	}
 }
 
 
@@ -37,7 +43,7 @@ public class Q7 {
 	public static void main(String[] args) {
 
 		Child c = new Child();
-		
+		System.out.println("x = " + c.x);
 		System.out.println("x = " + c.getX());
 		
 	}
