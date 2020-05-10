@@ -29,8 +29,16 @@ interface Stack_seungha_200510 {
 /* [문제] 1. 주어진 Stack 인터페이스를 상속받아 문자열을 Stack 자료구조로 저장하는 StringStack 클래스를 구현하시오. */
 class StringStack_seungha implements Stack_seungha_200510 {
 
-	String[] strArr;
-	int cnt = 0;
+	String[] strArr;		// String 배열
+	int cnt = 0;			// 배열에 들어있는 항목의 개수
+	
+	StringStack_seungha(int size) {
+		strArr = new String[size];
+	}
+	
+	StringStack_seungha() {
+		this(0);
+	}
 	
 	@Override
 	public int length() {
@@ -94,9 +102,7 @@ class StackApp_seungha {
 		Scanner scanner = new Scanner(System.in);
 		int size = scanner.nextInt();
 		
-		StringStack_seungha stack = new StringStack_seungha();
-		
-		stack.strArr = new String[size];
+		StringStack_seungha stack = new StringStack_seungha(size);
 		
 		while(true) {
 			System.out.print("문자열 입력 (종료는 0) >> ");
