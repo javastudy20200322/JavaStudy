@@ -67,17 +67,20 @@ class StringStack_seungha implements Stack_seungha {
 			return result=true;
 		} catch(IndexOutOfBoundsException e) {							// [조건] IndexOutOfBoundsException 예외를 처리하는 try-catch문을 포함하시오.
 			System.out.println("Stack이 가득 차서 넣을 수 없습니다.");
+			cnt--;
 			return result;
 		} catch(Exception e) {
 			System.out.println("Stack에 값을 넣을 수 없습니다.");
+			cnt--;
 			return result;
 		}
 	}
 	
 	public String toString() {
 		String summary = "";
-		for(int i=strArr.length-1; i>=0; i--) {
-			summary += (i==strArr.length-1) ? strArr[i] : ", " + strArr[i];
+
+		while(cnt!=0) {
+			summary += pop() + " ";
 		}
 		return summary;
 	}
