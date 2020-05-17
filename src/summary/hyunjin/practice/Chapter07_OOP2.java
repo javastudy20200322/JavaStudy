@@ -363,8 +363,8 @@ class Exercise7_23
 	/*
 	(1) sumArea메서드를 작성하시오.
 	*/
-	public static int sumArea(Shape[] arr) {
-		int sumArea = 0;
+	public static double sumArea(Shape[] arr) {
+		double sumArea = 0;
 		
 		for(int i=0; i<arr.length; i++) 
 			sumArea += arr[i].calcArea();
@@ -440,7 +440,7 @@ class Outer3 {
 //			System.out.println(/* (2) */);
 			System.out.println(this.value);
 //			System.out.println(/* (3) */);
-			System.out.println(Outer3.this.value);
+			System.out.println(Outer3.this.value); //Outer3$$Inner3
 		}
 	} // Inner클래스의 끝
 } // Outer클래스의 끝

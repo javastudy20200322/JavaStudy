@@ -53,7 +53,7 @@ import java.util.Scanner;
 //c. try {method();} catch(Exception e) {} catch(NumberException e) {}
 //d. try {method();} catch(InvalidNumberException e) {} catch(NotANumberException e) {}
 //e. try {method();} catch(NumberException e) {}
-//f. try {method();} catch(RuntimeException e) {}0
+//f. try {method();} catch(RuntimeException e) {}
 //답 : c , Exception은 최고 높은 예외처리기능
 
 
@@ -166,7 +166,7 @@ class Exercise8_8 {
 				input = new Scanner(System.in).nextInt();
 			} catch(Exception e) {
 				System.out.println("유효하지 않은 값입니다. 다시 값을 입력해주세요.");
-				continue;
+				continue;	//없어도됨
 			}
 			if(answer > input) {
 				System.out.println("더 큰 수를 입력하세요.");
@@ -262,16 +262,3 @@ class Exercise8_10 {
 	}
 }
 //247
-
-
-
-
-
-
-
-
-
-
-
-
-
