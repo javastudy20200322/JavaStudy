@@ -2,6 +2,7 @@ package practice.week07;
 
 import java.util.Scanner;
 import java.util.StringTokenizer;
+import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class Chapter09_seungha_200517
@@ -22,6 +23,42 @@ public class Chapter09_seungha_200517
 		byte[] bytes 	= {73, 32, 108, 111, 118, 101, 32, 121, 111, 117, 46};
 		String str 		= "";
 		
+		str = new String(bytes);
+		/* [참고]
+		 * String()
+		 * Initializes a newly created String object so that it represents an empty character sequence.
+		 * String(byte[] bytes)
+		 * Constructs a new String by decoding the specified array of bytes using the platform's default charset.
+		 * String(byte[] bytes, Charset charset)
+		 * Constructs a new String by decoding the specified array of bytes using the specified charset.
+		 * String(byte[] ascii, int hibyte)
+		 * Deprecated. 
+		 * This method does not properly convert bytes into characters. As of JDK 1.1, the preferred way to do this is via the String constructors that take a Charset, charset name, or that use the platform's default charset.
+		 * String(byte[] bytes, int offset, int length)
+		 * Constructs a new String by decoding the specified subarray of bytes using the platform's default charset.
+		 * String(byte[] bytes, int offset, int length, Charset charset)
+		 * Constructs a new String by decoding the specified subarray of bytes using the specified charset.
+		 * String(byte[] ascii, int hibyte, int offset, int count)
+		 * Deprecated. 
+		 * This method does not properly convert bytes into characters. As of JDK 1.1, the preferred way to do this is via the String constructors that take a Charset, charset name, or that use the platform's default charset.
+		 * String(byte[] bytes, int offset, int length, String charsetName)
+		 * Constructs a new String by decoding the specified subarray of bytes using the specified charset.
+		 * String(byte[] bytes, String charsetName)
+		 * Constructs a new String by decoding the specified array of bytes using the specified charset.
+		 * String(char[] value)
+		 * Allocates a new String so that it represents the sequence of characters currently contained in the character array argument.
+		 * String(char[] value, int offset, int count)
+		 * Allocates a new String that contains characters from a subarray of the character array argument.
+		 * String(int[] codePoints, int offset, int count)
+		 * Allocates a new String that contains characters from a subarray of the Unicode code point array argument.
+		 * String(String original)
+		 * Initializes a newly created String object so that it represents the same sequence of characters as the argument; in other words, the newly created string is a copy of the argument string.
+		 * String(StringBuffer buffer)
+		 * Allocates a new string that contains the sequence of characters currently contained in the string buffer argument.
+		 * String(StringBuilder builder)
+		 * Allocates a new string that contains the sequence of characters currently contained in the string builder argument.
+		 */
+		
 		System.out.println(str);
 	}
 	
@@ -30,6 +67,8 @@ public class Chapter09_seungha_200517
 	{
 		String src = "모든 프로그램은 자바로 개발할 수 있다. 자바 짱!";
 		String str = "";
+		
+		str = src.replace("자바", "Java");
 
 		System.out.println(str);
 	}
@@ -39,10 +78,12 @@ public class Chapter09_seungha_200517
 	public static void Example3()
 	{
 		String src 		= "5Angel1004";
-		String regExp 	= "";
+		String regExp 	= "(^[a-zA-Z][a-zA-Z0-9]{7,11}$)";
 		
 		// 코드작성.
-		
+		boolean b = Pattern.matches(regExp, src);
+		if(b) System.out.println("유효합니다.");
+		else System.out.println("유효하지 않습니다.");
 	}
 	
 //	Scanner를 이용하여 한 라인을 읽고, 공백으로 분리된 어절이 몇 개 들어 있는지 "그만"을 입력할 때까지 반복하는 프로그램을 작성하라.
@@ -65,7 +106,11 @@ public class Chapter09_seungha_200517
 			String input = scanner.nextLine();
 			
 			// 코드작성.
-			
+			if(input.equals("그만")) { break; }
+			String[] strArr = input.split(" ");
+			System.out.println(strArr[0]);
+			System.out.println(strArr[1]);
+			System.out.println("어절 개수는 " + strArr.length+1); // ?????
 		}
 	}
 	
@@ -94,6 +139,9 @@ public class Chapter09_seungha_200517
 		String str = scanner.nextLine();
 		
 		// 코드작성.
+		for (int i=0; i<=str.length(); i++) {
+				System.out.println(str.substring(i) + str.substring(0,i));
+		}
 
 	}
 	
