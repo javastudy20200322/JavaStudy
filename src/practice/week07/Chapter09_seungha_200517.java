@@ -108,9 +108,7 @@ public class Chapter09_seungha_200517
 			// 코드작성.
 			if(input.equals("그만")) { break; }
 			String[] strArr = input.split(" ");
-			System.out.println(strArr[0]);
-			System.out.println(strArr[1]);
-			System.out.println("어절 개수는 " + strArr.length+1); // ?????
+			System.out.println("어절 개수는 " + strArr.length);
 		}
 	}
 	
