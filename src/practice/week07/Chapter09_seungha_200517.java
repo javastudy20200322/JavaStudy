@@ -108,7 +108,6 @@ public class Chapter09_seungha_200517
 			String[] strArr = input.split(" ");
 			System.out.println("어절 개수는 " + strArr.length);
 		}
-		scanner.close();
 	}
 	
 //	문자열을 입력받아 한 글자씩 회전시켜 모두 출력하는 프로그램을 작성하라.
@@ -139,7 +138,6 @@ public class Chapter09_seungha_200517
 		for (int i=0; i<=str.length(); i++) {
 				System.out.println(str.substring(i) + str.substring(0,i));
 		}
-		scanner.close();
 	}
 	
 }
