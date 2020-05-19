@@ -94,8 +94,8 @@ public class Exercise22 {
 
 	public static void main(String[] args) {
 		Shape3[] arr = { new Circle3(5.0), new Rect3(3, 4), new Circle3(1) };
-		
-		System.out.println("합 : "+ sumArea(arr));
+
+		System.out.println("합 : " + sumArea(arr));
 
 	}
 
@@ -112,7 +112,6 @@ public class Exercise22 {
 
 //exercise 24
 /*
-* 인터페이스 장점이아닌것 : e 
-* 패키지끼리는 연결안됌
-* 
-*/
+ * 인터페이스 장점이아닌것 : e 패키지끼리는 연결안됌
+ * 
+ */

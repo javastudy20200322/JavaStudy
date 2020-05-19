@@ -31,5 +31,4 @@ public class Excercise10 {
 	static void method2() {
 		throw new NullPointerException();
 	}
-
 }

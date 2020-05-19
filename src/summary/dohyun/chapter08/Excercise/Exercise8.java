@@ -17,10 +17,8 @@ public class Exercise8 {
 			try {
 				input = new Scanner(System.in).nextInt();
 			} catch (InputMismatchException e) {
-				e.printStackTrace();
-			}
-			
-			
+				System.out.println("유효하지 않은 값입니다. 다시 값을 입력해주세요");
+			} 
 			if (answer > input) {
 				System.out.println("더 큰수를 입력하세요 .");
 			} else if (answer < input) {

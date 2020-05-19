@@ -23,7 +23,7 @@ public class Exercise5 {
 
 	public static void main(String[] args) {
 		method(true);
-//		method(false);
+		method(false);
 	}
 
 }
