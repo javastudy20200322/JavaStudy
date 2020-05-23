@@ -39,6 +39,7 @@ public class Example13
 		// code start..
 		while(true)
 		{
+//			String src = "aabbccAABBCCaa";
 			index = src.indexOf(key, pos);
 			if(index < 0)
 			{

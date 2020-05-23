@@ -63,31 +63,32 @@ public class Example06
 		}
 		else
 		{
+//			System.out.printf("%02d", 3); // 03
 			// 내 맘대로..
-//			String 	fotmat 	= "%0"+length+"d";
-//			int 	arg 	= Integer.parseInt(src);
-//			
-//			result = String.format(fotmat, arg);
+			String 	fotmat 	= "%0"+length+"d";
+			int 	arg 	= Integer.parseInt(src);
+			
+			result = String.format(fotmat, arg);
 			
 			
 			
 			
 			// 설명대로..
-			char[] charArr = new char[length];
-			for(int i=0; i<charArr.length-src.length(); i++)
-			{
-				charArr[i] = '0';
-			}
-			
-			for(int i=0; i<src.length(); i++)
-			{
-				charArr[i + charArr.length-src.length()] = src.charAt(i);
-			}
-			
-			for(int i=0; i<charArr.length; i++)
-			{
-				result += charArr[i];
-			}
+//			char[] charArr = new char[length];
+//			for(int i=0; i<charArr.length-src.length(); i++)
+//			{
+//				charArr[i] = '0';
+//			}
+//			
+//			for(int i=0; i<src.length(); i++)
+//			{
+//				charArr[i + charArr.length-src.length()] = src.charAt(i);
+//			}
+//			
+//			for(int i=0; i<charArr.length; i++)
+//			{
+//				result += charArr[i];
+//			}
 		}
 		
 		return result;
