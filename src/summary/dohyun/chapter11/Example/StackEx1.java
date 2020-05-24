@@ -7,7 +7,17 @@ public class StackEx1 {
 	public static Stack forward = new Stack();
 
 	public static void main(String[] args) {
+		goURL("1.네이트");
+		goURL("2.야후");
+		goURL("3.네이버");
+		goURL("4.다음");
 
+		printStatus();
+		
+		goBack();
+		System.out.println("뒤로가기 버튼 누른후 ");
+		printStatus();
+		
 	}
 
 	public static void printStatus() {

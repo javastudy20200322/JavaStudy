@@ -1,3 +1,4 @@
+//
 //package summary.dohyun.chapter11.Example;
 //
 //import java.util.*;
@@ -19,7 +20,7 @@
 //		ArrayList list2 = new ArrayList(list1.subList(1, 4));
 //		print(list1, list2);
 //
-//		Collections.sort(list1);
+//		Collections.sort(list1); // list1과 list2를 정렬한다.
 //		Collections.sort(list2);
 //		print(list1, list2);
 //
@@ -37,6 +38,12 @@
 //		System.out.println(list1.retainAll(list2));
 //		print(list1, list2);
 //
+//		for (int i = list2.size() - 1; i >= 0; i--) {
+//			if (list1.contains(list2.get(i))) {
+//				list2.remove(i);
+//			}
+//			print(list1, list2);
+//		}
 //	}
 //
 //	static void print(ArrayList<Integer> list1, ArrayList list2) {
