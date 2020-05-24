@@ -92,20 +92,23 @@ public class Chapter11_seungha_200524
 	static void findValue(ArrayList arrayList, int value)
 	{
 		// 코드 작성
-		int midIndex = arrayList.size()/2;
 		int cnt = 1;
+		int midIndex = arrayList.size()/2;
+		int midValue = (int)arrayList.get(midIndex);
+		System.out.println(midValue);
 		
 		List list = arrayList;
-		while((int)list.get(midIndex) != value ) {
+		while(midValue != value ) {
 			
-			if(value<(int)list.get(midIndex)) {
+			if(value<midValue) {
 				list = list.subList(0, midIndex);
 				System.out.println(list);
-			} else if(value>(int)list.get(midIndex)) {
+			} else if(value>midValue) {
 				list = list.subList(midIndex, list.size());
 				System.out.println(list);
 			}
 			midIndex = list.size()/2;
+			midValue = (int)list.get(midIndex);
 			cnt++;
 		}
 			System.out.println(value);
