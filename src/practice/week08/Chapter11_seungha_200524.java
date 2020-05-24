@@ -3,6 +3,7 @@ package practice.week08;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Scanner;
 
 public class Chapter11_seungha_200524
@@ -91,6 +92,24 @@ public class Chapter11_seungha_200524
 	static void findValue(ArrayList arrayList, int value)
 	{
 		// 코드 작성
+		int midIndex = arrayList.size()/2;
+		int cnt = 1;
+		
+		List list = arrayList;
+		while((int)list.get(midIndex) != value ) {
+			
+			if(value<(int)list.get(midIndex)) {
+				list = list.subList(0, midIndex);
+				System.out.println(list);
+			} else if(value>(int)list.get(midIndex)) {
+				list = list.subList(midIndex, list.size());
+				System.out.println(list);
+			}
+			midIndex = list.size()/2;
+			cnt++;
+		}
+			System.out.println(value);
+			System.out.println(value + "를 찾는 데 " + cnt + "번 걸렸습니다.");
 	}
 
 }
