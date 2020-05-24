@@ -1,4 +1,4 @@
-package summary.dohyun.chapter07.Example;
+package summary.dohyun.chapter07.Exercise;
 
 public class Exercise7 {
 	public static void main(String[] args) {
