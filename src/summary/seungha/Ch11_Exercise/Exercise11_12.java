@@ -24,7 +24,7 @@ class Exercise11_12 {
 
 class SutdaDeck {
 	final int CARD_NUM = 20;
-	SutdaCard[] cards = new SutdaCard[CARD_NUM];
+	SutdaCard_11_12[] cards = new SutdaCard_11_12[CARD_NUM];
 	
 	int pos = 0;					// 다음에 가져올 카드의 위치
 	HashMap jokbo = new HashMap();	// 족보를 저장할 HashMap
@@ -34,7 +34,7 @@ class SutdaDeck {
 			int num = i%10 + 1;
 			boolean isKwang = i<10 && (num==1 || num==3 || num==8);
 			
-			cards[i] = new SutdaCard(num, isKwang);
+			cards[i] = new SutdaCard_11_12(num, isKwang);
 		}
 		registerJokbo();	// 족보를 등록한다.
 	}
@@ -72,8 +72,8 @@ class SutdaDeck {
 	int getPoint(Player p) {
 		if(p==null) return 0;
 		
-		SutdaCard c1 = p.c1;
-		SutdaCard c2 = p.c2;
+		SutdaCard_11_12 c1 = p.c1;
+		SutdaCard_11_12 c2 = p.c2;
 		
 		Integer result = 0;
 		
@@ -98,8 +98,8 @@ class SutdaDeck {
 		 return result.intValue();
 	}
 	
-	SutdaCard pick() throws Exception {
-		SutdaCard c = null;
+	SutdaCard_11_12 pick() throws Exception {
+		SutdaCard_11_12 c = null;
 		
 		if(0<=pos && pos<CARD_NUM) {
 			c = cards[pos];
@@ -116,7 +116,7 @@ class SutdaDeck {
 			int i = (int)(Math.random() * CARD_NUM);
 			int j = (int)(Math.random() * CARD_NUM);
 			
-			SutdaCard tmp = cards[i];
+			SutdaCard_11_12 tmp = cards[i];
 			cards[i] = cards[j];
 			cards[j] = tmp;
 		}
@@ -125,12 +125,12 @@ class SutdaDeck {
 
 class Player {
 	String name;
-	SutdaCard c1;
-	SutdaCard c2;
+	SutdaCard_11_12 c1;
+	SutdaCard_11_12 c2;
 	
 	int point;	// 카드의 등급에 따른 점수
 	
-	Player(String name, SutdaCard c1, SutdaCard c2) {
+	Player(String name, SutdaCard_11_12 c1, SutdaCard_11_12 c2) {
 		this.name = name;
 		this.c1 = c1;
 		this.c2 = c2;
@@ -141,15 +141,15 @@ class Player {
 	}
 }	// Player클래스의 끝
 
-class SutdaCard {
+class SutdaCard_11_12 {
 	int num;
 	boolean isKwang;
 	
-	SutdaCard() {
+	SutdaCard_11_12() {
 		this(1, true);
 	}
 	
-	SutdaCard(int num, boolean isKwang) {
+	SutdaCard_11_12(int num, boolean isKwang) {
 		this.num = num;
 		this.isKwang = isKwang;
 	}

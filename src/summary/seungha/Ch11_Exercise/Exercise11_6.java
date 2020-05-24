@@ -7,13 +7,13 @@ import java.util.*;
  * 평균점수의 범위를 주면 해당 범위에 속한 학생의 수를 반환하는 getGroupCount()를 완성하라.
  * [Hint] TreeSet의 subSet(Object from, Object to)를 사용하라.
  */
-class Student implements Comparable {
+class Student_11_6 implements Comparable {
 	String name;
 	int ban;
 	int no;
 	int kor, eng, math;
 	
-	Student(String name, int ban, int no, int kor, int eng, int math) {
+	Student_11_6(String name, int ban, int no, int kor, int eng, int math) {
 		this.name = name;
 		this.ban = ban;
 		this.no = no;
@@ -35,8 +35,8 @@ class Student implements Comparable {
 	}
 	
 	public int compareTo(Object o) {
-		if(o instanceof Student) {
-			Student tmp = (Student)o;
+		if(o instanceof Student_11_6) {
+			Student_11_6 tmp = (Student_11_6)o;
 			return name.compareTo(tmp.name);
 		} else {
 			return -1;
@@ -47,8 +47,8 @@ class Student implements Comparable {
 class Exercise11_6 {
 	static int getGroupCount(TreeSet tset, int from, int to) {
 		/* (1) 알맞은 코드를 넣어 완성하시오. */
-		Student s1 = new Student("", 0, 0, from, from, from);
-		Student s2 = new Student("", 0, 0, to, to, to);
+		Student_11_6 s1 = new Student_11_6("", 0, 0, from, from, from);
+		Student_11_6 s2 = new Student_11_6("", 0, 0, to, to, to);
 		
 		return tset.subSet(s1,s2).size();
 	}
@@ -57,9 +57,9 @@ class Exercise11_6 {
 		TreeSet set = new TreeSet(new Comparator() { // 
 			public int compare(Object o1, Object o2) {
 				/* (2) 알맞은 코드를 넣어 완성하시오. */
-				if(o1 instanceof Student && o2 instanceof Student) {
-					Student s1 = (Student)o1;
-					Student s2 = (Student)o2;
+				if(o1 instanceof Student_11_6 && o2 instanceof Student_11_6) {
+					Student_11_6 s1 = (Student_11_6)o1;
+					Student_11_6 s2 = (Student_11_6)o2;
 					
 					return (int)(s1.getAverage() - s2.getAverage());
 				} else {
@@ -68,11 +68,11 @@ class Exercise11_6 {
 			}
 		});	
 		
-		set.add(new Student("홍길동", 1, 1, 100, 100, 100));
-		set.add(new Student("남궁성", 1, 2, 90, 70, 80));
-		set.add(new Student("김자바", 1, 3, 80, 80, 90));
-		set.add(new Student("이자바", 1, 4, 70, 90, 70));
-		set.add(new Student("안자바", 1, 5, 60, 100, 80));
+		set.add(new Student_11_6("홍길동", 1, 1, 100, 100, 100));
+		set.add(new Student_11_6("남궁성", 1, 2, 90, 70, 80));
+		set.add(new Student_11_6("김자바", 1, 3, 80, 80, 90));
+		set.add(new Student_11_6("이자바", 1, 4, 70, 90, 70));
+		set.add(new Student_11_6("안자바", 1, 5, 60, 100, 80));
 		
 		Iterator it = set.iterator();
 		

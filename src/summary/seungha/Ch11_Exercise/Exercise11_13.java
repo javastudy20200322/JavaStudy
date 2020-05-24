@@ -3,29 +3,29 @@ package summary.seungha.Ch11_Exercise;
 import java.util.*;
 
 /* Exercise 11-13. 다음 코드는 문제11-12를 발전시킨 것으로
- * 각 Player들의 점수를 계산하고, 점수가 제일 높은 사람을 출력하는 코드이다.
+ * 각 Player_11_13들의 점수를 계산하고, 점수가 제일 높은 사람을 출력하는 코드이다.
  * TreeMap의 정렬기준을 점수가 제일 높은 사람부터 내림차순이 되도록 아래의 코드를 완성하시오.
  * 단, 동점자 처리는 하지 않는다.
  */
 class Exercise11_13 {
 	public static void main(String[] args) throws Exception {
-		SutdaDeck deck = new SutdaDeck();
+		SutdaDeck_11_13 deck = new SutdaDeck_11_13();
 		
 		deck.shuffle();
 		
-		Player[] pArr = {
-			new Player("타짜", deck.pick(), deck.pick()),
-			new Player("고수", deck.pick(), deck.pick()),
-			new Player("물주", deck.pick(), deck.pick()),
-			new Player("중수", deck.pick(), deck.pick()),
-			new Player("하수", deck.pick(), deck.pick())
+		Player_11_13[] pArr = {
+			new Player_11_13("타짜", deck.pick(), deck.pick()),
+			new Player_11_13("고수", deck.pick(), deck.pick()),
+			new Player_11_13("물주", deck.pick(), deck.pick()),
+			new Player_11_13("중수", deck.pick(), deck.pick()),
+			new Player_11_13("하수", deck.pick(), deck.pick())
 		};
 		
 		TreeMap rank = new TreeMap(new Comparator() {
 			public int compare(Object o1, Object o2) {
-				if(o1 instanceof Player && o2 instanceof Player) {
-					Player p1 = (Player)o1;
-					Player p2 = (Player)o2;
+				if(o1 instanceof Player_11_13 && o2 instanceof Player_11_13) {
+					Player_11_13 p1 = (Player_11_13)o1;
+					Player_11_13 p2 = (Player_11_13)o2;
 					
 					return p2.point - p1.point;	// 점수 내림차순 정렬
 				} else {
@@ -35,7 +35,7 @@ class Exercise11_13 {
 		});
 		
 		for(int i=0; i<pArr.length; i++) {
-			Player p = pArr[i];
+			Player_11_13 p = pArr[i];
 			rank.put(p, deck.getPoint(p));
 			System.out.println(p + " " + deck.getPoint(p));
 		}
@@ -45,19 +45,19 @@ class Exercise11_13 {
 	}
 }
 
-class SutdaDeck {
+class SutdaDeck_11_13 {
 	final int CARD_NUM = 20;
-	SutdaCard[] cards = new SutdaCard[CARD_NUM];
+	SutdaCard_11_13[] cards = new SutdaCard_11_13[CARD_NUM];
 	
 	int pos = 0;					// 다음에 가져올 카드의 위치
 	HashMap jokbo = new HashMap();	// 족보를 저장할 HashMap
 	
-	SutdaDeck() {
+	SutdaDeck_11_13() {
 		for(int i=0; i<cards.length; i++) {
 			int num = i%10 + 1;
 			boolean isKwang = i<10 && (num==1 || num==3 || num==8);
 			
-			cards[i] = new SutdaCard(num, isKwang);
+			cards[i] = new SutdaCard_11_13(num, isKwang);
 		}
 		registerJokbo();	// 족보를 등록한다.
 	}
@@ -92,11 +92,11 @@ class SutdaDeck {
 		 jokbo.put("64", 2010);
 	}
 	
-	int getPoint(Player p) {
+	int getPoint(Player_11_13 p) {
 		if(p==null) return 0;
 		
-		SutdaCard c1 = p.c1;
-		SutdaCard c2 = p.c2;
+		SutdaCard_11_13 c1 = p.c1;
+		SutdaCard_11_13 c2 = p.c2;
 		
 		Integer result = 0;
 		
@@ -105,7 +105,7 @@ class SutdaDeck {
 		 *	2. 두 카드의 숫자(num)로 jokbo에서 등급을 조회한다.
 		 *	3. 해당하는 등급이 없으면, 아래의 공식으로 점수를 계산한다.
 		 *	   (c1.num + c2.num) & 10 + 1000
-		 *	4. Player의 점수(point)에 계산한 값을 저장한다.
+		 *	4. Player_11_13의 점수(point)에 계산한 값을 저장한다.
 		 */
 		 if(c1.isKwang && c2.isKwang) {
 			 result = (Integer)jokbo.get("KK");
@@ -121,8 +121,8 @@ class SutdaDeck {
 		 return result.intValue();
 	}
 	
-	SutdaCard pick() throws Exception {
-		SutdaCard c = null;
+	SutdaCard_11_13 pick() throws Exception {
+		SutdaCard_11_13 c = null;
 		
 		if(0<=pos && pos<CARD_NUM) {
 			c = cards[pos];
@@ -139,21 +139,21 @@ class SutdaDeck {
 			int i = (int)(Math.random() * CARD_NUM);
 			int j = (int)(Math.random() * CARD_NUM);
 			
-			SutdaCard tmp = cards[i];
+			SutdaCard_11_13 tmp = cards[i];
 			cards[i] = cards[j];
 			cards[j] = tmp;
 		}
 	}
-}	// SutdaDeck클래스의 끝
+}	// SutdaDeck_11_13클래스의 끝
 
-class Player {
+class Player_11_13 {
 	String name;
-	SutdaCard c1;
-	SutdaCard c2;
+	SutdaCard_11_13 c1;
+	SutdaCard_11_13 c2;
 	
 	int point;	// 카드의 등급에 따른 점수
 	
-	Player(String name, SutdaCard c1, SutdaCard c2) {
+	Player_11_13(String name, SutdaCard_11_13 c1, SutdaCard_11_13 c2) {
 		this.name = name;
 		this.c1 = c1;
 		this.c2 = c2;
@@ -162,17 +162,17 @@ class Player {
 	public String toString() {
 		return "[" + name + "]" + c1.toString() + ", " + c2.toString();
 	}
-}	// Player클래스의 끝
+}	// Player_11_13클래스의 끝
 
-class SutdaCard {
+class SutdaCard_11_13 {
 	int num;
 	boolean isKwang;
 	
-	SutdaCard() {
+	SutdaCard_11_13() {
 		this(1, true);
 	}
 	
-	SutdaCard(int num, boolean isKwang) {
+	SutdaCard_11_13(int num, boolean isKwang) {
 		this.num = num;
 		this.isKwang = isKwang;
 	}

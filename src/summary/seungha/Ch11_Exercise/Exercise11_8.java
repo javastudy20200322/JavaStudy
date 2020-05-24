@@ -2,11 +2,11 @@ package summary.seungha.Ch11_Exercise;
 
 import java.util.*;
 
-/* Exercise 11-8. 문제 11-7의 Student클래스에 총점(total)과 전교등수(schoolRank)를 저장하기 위한 인스턴스변수를 추가하였다.
- * Student클래스의 기본정렬을 이름(name)이 아닌 총점(total)을 기준으로 한 내림차순으로 변경한 다음,
+/* Exercise 11-8. 문제 11-7의 Student_11_8클래스에 총점(total)과 전교등수(schoolRank)를 저장하기 위한 인스턴스변수를 추가하였다.
+ * Student_11_8클래스의 기본정렬을 이름(name)이 아닌 총점(total)을 기준으로 한 내림차순으로 변경한 다음,
  * 총점을 기준으로 각 학생의 전교등수를 계산하고 전교등수를 기준으로 오름차순 정렬하여 출력하시오.
  */
-class Student implements Comparable {
+class Student_11_8 implements Comparable {
 	String name;
 	int ban;
 	int no;
@@ -15,7 +15,7 @@ class Student implements Comparable {
 	int total;		// 총점
 	int schoolRank;	// 전교등수
 	
-	Student(String name, int ban, int no, int kor, int eng, int math) {
+	Student_11_8(String name, int ban, int no, int kor, int eng, int math) {
 		this.name = name;
 		this.ban = ban;
 		this.no = no;
@@ -40,8 +40,8 @@ class Student implements Comparable {
 	
 	public int compareTo(Object o) {
 		/* (1) 알맞은 코드를 넣어 완성하시오. */
-		if(o instanceof Student) {
-			Student tmp = (Student)o;
+		if(o instanceof Student_11_8) {
+			Student_11_8 tmp = (Student_11_8)o;
 			
 			return tmp.total - this.total;	// 총점 기준(내림차순) 정렬
 		} else {
@@ -60,7 +60,7 @@ class Exercise11_8 {
 		int length = list.size();
 		
 		/* (2) 아래의 로직에 맞게 코드를 작성하시오.
-		 *	1. 반복문을 이용해서 list에 저장된 Student객체를 하나씩 읽는다.
+		 *	1. 반복문을 이용해서 list에 저장된 Student_11_8객체를 하나씩 읽는다.
 		 *		1-1. 총점(total)이 이전총점(prevTotal)과 같으면
 		 *			 이전 등수(prevRank)를 등수(schoolRank)로 한다.
 		 *		1-2. 총점이 서로 다르면, 등수(schoolRank)의 값을 알맞게 계산해서 저장한다.
@@ -69,7 +69,7 @@ class Exercise11_8 {
 		 *		1-3. 현재 총점과 등수를 이전총점(prevTotal)과 이전등수(prevRank)에 저장한다.
 		 */
 		for (int i=0; i<length; i++) {
-			Student s = (Student)list.get(i);
+			Student_11_8 s = (Student_11_8)list.get(i);
 			
 			if(s.total==prevTotal) {
 				s.schoolRank = prevRank;
@@ -84,11 +84,11 @@ class Exercise11_8 {
 	
 	public static void main(String[] args) {
 		ArrayList list = new ArrayList();
-		list.add(new Student("이자바", 2, 1, 70, 90, 70));
-		list.add(new Student("안자바", 2, 2, 60, 100, 80));
-		list.add(new Student("홍길동", 1, 3, 100, 100, 100));
-		list.add(new Student("남궁성", 1, 1, 90, 70, 80));
-		list.add(new Student("김자바", 1, 2, 80, 80, 90));
+		list.add(new Student_11_8("이자바", 2, 1, 70, 90, 70));
+		list.add(new Student_11_8("안자바", 2, 2, 60, 100, 80));
+		list.add(new Student_11_8("홍길동", 1, 3, 100, 100, 100));
+		list.add(new Student_11_8("남궁성", 1, 1, 90, 70, 80));
+		list.add(new Student_11_8("김자바", 1, 2, 80, 80, 90));
 		
 		calculateSchoolRank(list);
 		
