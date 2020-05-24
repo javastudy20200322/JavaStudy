@@ -107,6 +107,7 @@ public class Example14
 			{
 				try
 				{
+					// Scanner().useDelimiter(구분자)도 같은 역할임.
 					String[] inputArr = input.split(",");
 					
 					Student student = new Student(

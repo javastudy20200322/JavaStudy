@@ -11,9 +11,9 @@ public class Example05_07
 
 	public static void main(String[] args)
 	{
-//		example05();
+		example05();
 //		example06();
-		example07();
+//		example07();
 	}
 	
 	// 다음에 제시된 Student클래스가 Comparable인터페이스를 구현하도록 변경해서 이름(name)이 기본 정렬기준이 되도록 하시오.
@@ -165,9 +165,9 @@ class Student implements Comparable
 		if(o instanceof Student)
 		{
 			Student s = (Student) o;
-//			System.out.print("this : " + this.name + ", ");	// this는 추가하는 객체
-//			System.out.print("s : " + s.name + ", ");		// s는 바로 전에 추가된 객체
-//			System.out.println(this.name.compareTo(s.name));
+			System.out.print("this : " + this.name + ", ");	// this는 추가하는 객체
+			System.out.print("s : " + s.name + ", ");		// s는 바로 전에 추가된 객체
+			System.out.println(this.name.compareTo(s.name));
 			
 			// 음수가 리턴되면 this객체의 name이 사전상 앞쪽, 양수가 리턴되면 뒤쪽
 			// 음수가 리턴되면 s의 -1번째 index에 있는 객체와 비교
