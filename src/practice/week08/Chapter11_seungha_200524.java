@@ -42,7 +42,7 @@ public class Chapter11_seungha_200524
 			input = scanner.nextLine();
 			if (input.equals("그만")) { break; }
 			nations.put(input.split(" ")[0], input.split(" ")[1]);
-		} while(!input.equals("그만"));
+		} while(true);
 		
 		do {
 			System.out.print("인구 검색 >> ");
@@ -53,7 +53,7 @@ public class Chapter11_seungha_200524
 			} else {
 				System.out.println(input + " 에 대한 정보는 없습니다.");
 			}
-		} while(!input.equals("그만"));
+		} while(true);
 	}
 	
 //	문제2) 이진검색 구현하기.
