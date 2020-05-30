@@ -1,4 +1,4 @@
-package summary.collectionframework;
+package reference.collectionframework;
 
 
 public class MyCamelMap extends MyMap
