@@ -51,6 +51,8 @@ public class ThreadPoolExample_seungha_200607
 		for(int i=0; i<customerList.size(); i++) {
 			executorService.execute(new Calculate_seungha(customerList.get(i)));
 		}
+		
+		executorService.shutdown();
 	}
 }
 
