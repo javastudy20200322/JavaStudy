@@ -23,7 +23,7 @@ class Q5 {
 	
 	public static void main(String[] args) {
 		method(true);
-		method(false);
+		//method(false);
 		
 	}
 	

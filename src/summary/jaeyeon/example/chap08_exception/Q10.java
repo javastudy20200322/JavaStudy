@@ -17,7 +17,7 @@ public class Q10 {
 			System.out.println(1);
 		} catch (NullPointerException e) {
 			System.out.println(2);
-			throw e;
+			throw e;//새로운 e 오류를 발생시킴.
 		} catch (Exception e) {
 
 		}
