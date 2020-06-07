@@ -41,6 +41,7 @@ class Example9_1 extends Thread
 			}
 			catch(InterruptedException e)
 			{
+				interrupt();
 				e.printStackTrace();
 			}
 		}

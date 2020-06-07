@@ -1,7 +1,8 @@
-package practice.week10;
+package practice.week10.haesung;
 
 import java.util.LinkedList;
 import java.util.List;
+import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.ThreadPoolExecutor;
 
@@ -36,7 +37,7 @@ import java.util.concurrent.ThreadPoolExecutor;
  * pool-1-thread-1 : 손님10의 계산을 시작.
  * </pre>
  */
-public class ThreadPoolExample
+public class ThreadPoolExample_haesung_200607
 {
 	public static void main(String[] args)
 	{
@@ -47,6 +48,13 @@ public class ThreadPoolExample
 		}
 		
 		// 작성시작
+		ExecutorService 	executorService 	= Executors.newFixedThreadPool(3);
+		ThreadPoolExecutor 	threadPoolExecutor 	= (ThreadPoolExecutor) executorService;
+		
+		for(int i=0; i<customerList.size(); i++)
+		{
+			threadPoolExecutor.execute(new Calculate(customerList.get(i)));
+		}
 		
 		
 	}

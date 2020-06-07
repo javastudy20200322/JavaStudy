@@ -50,7 +50,7 @@ class Thread5 extends Thread
 			
 			try
 			{
-				Thread.sleep(10*1000);
+				Thread.sleep(3*1000);
 			}
 			catch(Exception e)
 			{
