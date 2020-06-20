@@ -16,6 +16,10 @@ public class Example06
 		int 		maxLength = intStream.summaryStatistics().getMax();
 		
 		System.out.println(maxLength);
+		
+		
+		
+		System.out.println(Stream.of(strArr).mapToInt(x -> x.length()).max());
 	}
 
 }

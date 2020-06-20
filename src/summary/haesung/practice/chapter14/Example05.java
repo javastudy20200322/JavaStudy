@@ -16,6 +16,9 @@ public class Example05
 		int 		sum 		= (int) intStream.summaryStatistics().getSum();
 		
 		System.out.println("sum : " + sum);
+		
+		
+		System.out.println(Stream.of(strArr).mapToInt(x -> x.length()).sum());
 	}
 
 }
