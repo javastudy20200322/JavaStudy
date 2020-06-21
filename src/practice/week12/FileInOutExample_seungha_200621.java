@@ -40,25 +40,6 @@ public class FileInOutExample_seungha_200621
 	public static void main(String[] args)
 	{
 		conductDeserializing();
-		
-		String 	path 	= "src/practice/week12/songinfo.ser";
-//		String 	path 	= args[0];
-//		int 	lineNum = Integer.parseInt(args[1]);
-		
-		try
-		{
-			FileReader 		fr = new FileReader(path);
-			BufferedReader 	br = new BufferedReader(fr);
-			
-			for(int i=0; i<1; i++)
-			{
-//				System.out.println(i+1 + " : " + br.readLine());
-			}
-		}
-		catch (IOException e)
-		{
-			e.printStackTrace();
-		}
 	}
 	
 	private static void conductDeserializing() {
@@ -86,6 +67,7 @@ public class FileInOutExample_seungha_200621
 				bw.close();
 			}
 
+			in.close();
 		} catch(IOException e) {
 			e.printStackTrace();
 		} catch (ClassNotFoundException e) {
