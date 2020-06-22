@@ -28,7 +28,6 @@ public class FileInOutExample
 	public static void main(String[] args)
 	{
 		// Code Start..
-		
 	}
 
 }

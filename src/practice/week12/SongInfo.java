@@ -19,6 +19,30 @@ public class SongInfo implements Serializable
 		this.title 	= title;
 		this.lirics = lirics;
 	}
+	
+	public String getSinger() {
+		return singer;
+	}
+
+	public void setSinger(String singer) {
+		this.singer = singer;
+	}
+
+	public String getTitle() {
+		return title;
+	}
+
+	public void setTitle(String title) {
+		this.title = title;
+	}
+
+	public String getLirics() {
+		return lirics;
+	}
+
+	public void setLirics(String lirics) {
+		this.lirics = lirics;
+	}
 
 	@Override
 	public String toString() {

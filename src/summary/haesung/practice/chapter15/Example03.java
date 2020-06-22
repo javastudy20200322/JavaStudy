@@ -66,13 +66,14 @@ public class Example03
 			if(files[i].isDirectory())
 			{
 				totalDirs++;
+				countFiles(files[i]);
 			}
 			else if(files[i].isFile())
 			{
 				totalFiles++;
+				totalSize += files[i].length();
 			}
 			
-			totalSize += files[i].length();
 		}
 	}
 
