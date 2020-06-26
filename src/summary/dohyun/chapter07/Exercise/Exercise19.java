@@ -4,15 +4,15 @@ public class Exercise19 {
 //무슨 문제인지 모르겠넹...
 
 	public static void main(String[] args) {
-		Buyer b = new Buyer();
-		b.buy(new Tv99());
-		b.buy(new Computer());
-		b.buy(new Tv99());
-		b.buy(new Audio());
-		b.buy(new Computer());
-		b.buy(new Computer());
-		b.buy(new Computer());
-		b.summary();
+//		Buyer b = new Buyer();
+//		b.buy(new Tv99());
+//		b.buy(new Computer());
+//		b.buy(new Tv99());
+//		b.buy(new Audio());
+//		b.buy(new Computer());
+//		b.buy(new Computer());
+//		b.buy(new Computer());
+//		b.summary();
 	}
 
 }
